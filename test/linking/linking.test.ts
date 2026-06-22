@@ -3,51 +3,62 @@ import { EmptyFileSystem, type LangiumDocument } from "langium";
 import { expandToString as s } from "langium/generate";
 import { clearDocuments, parseHelper } from "langium/test";
 import { createStellaServices } from "../../src/language/stella-module.js";
-import { Model, isModel } from "../../src/language/generated/ast.js";
+import {
+    Program,
+    isApplication,
+    isDeclFun,
+    isProgram,
+    isVar,
+} from "../../src/language/generated/ast.js";
 
 let services: ReturnType<typeof createStellaServices>;
-let parse:    ReturnType<typeof parseHelper<Model>>;
-let document: LangiumDocument<Model> | undefined;
+let parse: ReturnType<typeof parseHelper<Program>>;
+let document: LangiumDocument<Program> | undefined;
 
 beforeAll(async () => {
     services = createStellaServices(EmptyFileSystem);
-    parse = parseHelper<Model>(services.Stella);
-
-    // activate the following if your linking test requires elements from a built-in library, for example
-    // await services.shared.workspace.WorkspaceManager.initializeWorkspace([]);
+    parse = parseHelper<Program>(services.Stella);
 });
 
 afterEach(async () => {
-    document && clearDocuments(services.shared, [ document ]);
+    document && clearDocuments(services.shared, [document]);
 });
 
-describe('Linking tests', () => {
-
-    test('linking of greetings', async () => {
+describe("Linking tests", () => {
+    test("links function calls to declarations", async () => {
         document = await parse(`
-            person Langium
-            Hello Langium!
+            language core;
+
+            fn main() {
+                return 0
+            }
+
+            fn caller() {
+                return main()
+            }
         `);
 
-        expect(
-            // here we first check for validity of the parsed document object by means of the reusable function
-            //  'checkDocumentValid()' to sort out (critical) typos first,
-            // and then evaluate the cross references we're interested in by checking
-            //  the referenced AST element as well as for a potential error message;
-            checkDocumentValid(document)
-                || document.parseResult.value.greetings.map(g => g.person.ref?.name || g.person.error?.message).join('\n')
-        ).toBe(s`
-            Langium
-        `);
+        expect(checkDocumentValid(document)).toBeUndefined();
+
+        const caller = document.parseResult.value.decls.find(
+            decl => isDeclFun(decl) && decl.name === "caller"
+        );
+
+        if (!isDeclFun(caller) || !isApplication(caller.returnExpr) || !isVar(caller.returnExpr.fun)) {
+            throw new Error("Expected caller to return a direct call to main().");
+        }
+
+        expect(caller.returnExpr.fun.ref.ref?.name || caller.returnExpr.fun.ref.error?.message)
+            .toBe("main");
     });
 });
 
 function checkDocumentValid(document: LangiumDocument): string | undefined {
     return document.parseResult.parserErrors.length && s`
         Parser errors:
-          ${document.parseResult.parserErrors.map(e => e.message).join('\n  ')}
+          ${document.parseResult.parserErrors.map(e => e.message).join("\n  ")}
     `
-        || document.parseResult.value === undefined && `ParseResult is 'undefined'.`
-        || !isModel(document.parseResult.value) && `Root AST object is a ${document.parseResult.value.$type}, expected a '${Model}'.`
+        || document.parseResult.value === undefined && "ParseResult is 'undefined'."
+        || !isProgram(document.parseResult.value) && `Root AST object is a ${document.parseResult.value.$type}, expected a '${Program.$type}'.`
         || undefined;
 }
