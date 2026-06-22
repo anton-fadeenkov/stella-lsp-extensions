@@ -11,7 +11,7 @@ export function registerShowAstJsonCommand(
 
     if (!editor || editor.document.languageId !== "stella") {
       await vscode.window.showInformationMessage(
-        "Открой файл Stella, чтобы показать AST."
+        "Open a Stella file to show the AST."
       );
       return;
     }
@@ -26,7 +26,7 @@ export function registerShowAstJsonCommand(
 
       if (!ast) {
         await vscode.window.showWarningMessage(
-          "Не удалось получить AST для текущего документа."
+          "Could not get the AST for the current document."
         );
         return;
       }
@@ -47,7 +47,7 @@ export function registerShowAstJsonCommand(
         error instanceof Error ? error.message : "Unknown error";
 
       await vscode.window.showErrorMessage(
-        `Ошибка при получении AST: ${message}`
+        `Failed to get AST: ${message}`
       );
     }
   });

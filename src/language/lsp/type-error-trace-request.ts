@@ -768,76 +768,76 @@ function getExpressionAncestorPath(node: Expr): Expr[] {
 function relationDetail(parent: Expr, child: Expr): string | undefined {
   if (isApplication(parent)) {
     if (child === parent.fun) {
-      return "Сначала нужно вывести тип функции в позиции применения.";
+      return "The function type must be inferred first at the application site.";
     }
 
     if (parent.args.includes(child)) {
-      return "Затем проверяется аргумент применения и его совместимость с параметром функции.";
+      return "Then the application argument is checked against the corresponding function parameter.";
     }
   }
 
   if (isIf(parent)) {
     if (child === parent.condition) {
-      return "Условие if должно иметь тип Bool.";
+      return "The if condition must have type Bool.";
     }
     if (child === parent.thenExpr || child === parent.elseExpr) {
-      return "Обе ветви if должны иметь совместимые типы.";
+      return "Both if branches must have compatible types.";
     }
   }
 
   if (isLet(parent)) {
     if (child === parent.body) {
-      return "После проверки связываний тип тела let выводится в расширенном контексте.";
+      return "After checking the bindings, the let body is inferred in the extended context.";
     }
-    return "Сначала вычисляется тип правой части связывания let.";
+    return "The right-hand side of the let binding is inferred first.";
   }
 
   if (isLetRec(parent)) {
     if (child === parent.body) {
-      return "Тело letrec проверяется после добавления рекурсивных связываний в контекст.";
+      return "The letrec body is checked after recursive bindings are added to the context.";
     }
-    return "Правая часть рекурсивного связывания проверяется в уже расширенном контексте.";
+    return "The right-hand side of the recursive binding is checked in the already extended context.";
   }
 
   if (isMatch(parent)) {
     if (child === parent.expr) {
-      return "Сначала проверяется выражение, по которому выполняется сопоставление.";
+      return "The matched expression is checked first.";
     }
-    return "Каждая ветка match проверяется в контексте, расширенном переменными паттерна.";
+    return "Each match branch is checked in a context extended with the pattern variables.";
   }
 
   if (isNatRec(parent)) {
     if (child === parent.n) {
-      return "Первый аргумент Nat::rec должен иметь тип Nat.";
+      return "The first Nat::rec argument must have type Nat.";
     }
     if (child === parent.initial) {
-      return "Второй аргумент Nat::rec задаёт базовый случай вычисления.";
+      return "The second Nat::rec argument defines the base case.";
     }
     if (child === parent.step) {
-      return "Третий аргумент Nat::rec должен задавать корректный шаг рекурсии.";
+      return "The third Nat::rec argument must define a valid recursion step.";
     }
   }
 
   if (isTypeAsc(parent) && child === parent.expr) {
-    return "Аннотированное выражение должно быть совместимо с явно указанным типом.";
+    return "The annotated expression must be compatible with the explicit type.";
   }
 
   if (isAssign(parent)) {
     return child === parent.left
-      ? "Слева от присваивания должно быть ссылочное значение." 
-      : "Тип правой части должен быть совместим с типом ссылки слева.";
+      ? "The left-hand side of an assignment must be a reference value."
+      : "The right-hand side type must be compatible with the reference type on the left.";
   }
 
   if (isRef(parent) && child === parent.expr) {
-    return "Тип ссылки строится из типа вложенного выражения.";
+    return "The reference type is built from the nested expression type.";
   }
 
   if (isDeref(parent) && child === parent.expr) {
-    return "Для разыменования требуется выражение ссылочного типа.";
+    return "Dereferencing requires an expression of reference type.";
   }
 
   if (isSequence(parent)) {
-    return "В последовательности ошибка может приходить из любого из подвыражений по порядку вычисления.";
+    return "In a sequence, the error may come from any subexpression in evaluation order.";
   }
 
   if (
@@ -852,18 +852,18 @@ function relationDetail(parent: Expr, child: Expr): string | undefined {
     isEqual(parent) ||
     isNotEqual(parent)
   ) {
-    return "Бинарный оператор требует, чтобы типы его операндов удовлетворяли правилу этого оператора.";
+    return "The binary operator requires operand types that satisfy its typing rule.";
   }
 
   if (isLogicAnd(parent) || isLogicOr(parent)) {
-    return "Логический оператор ожидает булевы операнды.";
+    return "The logical operator expects Boolean operands.";
   }
 
   if (isLogicNot(parent) || isSucc(parent) || isPred(parent) || isIsZero(parent)) {
-    return "Тип внешнего выражения определяется по типу его единственного подвыражения.";
+    return "The outer expression type is determined from its single subexpression.";
   }
 
-  return `Ошибка проявляется внутри подвыражения правила ${getRuleName(child)}.`;
+  return `The error appears inside the subexpression for rule ${getRuleName(child)}.`;
 }
 
 function createTraceNode(
@@ -905,7 +905,7 @@ function buildTraceChain(
     return createTraceNode(
       current,
       displayedContext,
-      `Точка ошибки: ${formatDiagnosticSummary(diagnostic)}`,
+      `Error point: ${formatDiagnosticSummary(diagnostic)}`,
       services,
       [],
       true,
@@ -948,7 +948,7 @@ function maybeWrapWithReturnContract(
     id: `${buildAstNodeId(enclosingDecl)}:return-check`,
     ruleName: "RETURN-CHECK",
     judgement: `${functionName} : return ${declaredReturnType ?? "unknown"}`,
-    detail: `Контракт функции требует тип ${diagnostic.expectedType ?? declaredReturnType ?? "unknown"}, но вычисленная ветка приводит к ${diagnostic.actualType ?? "unknown"}.`,
+    detail: `The function contract requires type ${diagnostic.expectedType ?? declaredReturnType ?? "unknown"}, but the computed branch produces ${diagnostic.actualType ?? "unknown"}.`,
     range: getNodeRange(enclosingDecl),
     children: [root],
   };

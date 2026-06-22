@@ -420,7 +420,7 @@ function getHtml(webview: vscode.Webview, response: TypeErrorTraceView): string 
 <body>
   <div class="toolbar">
     <h1>Type error trace</h1>
-    <p>Цепочка правил и подвыражений, которая приводит к текущей ошибке типизации.</p>
+    <p>The chain of rules and subexpressions that leads to the current type error.</p>
   </div>
 
   <div class="diagnostic-card">
@@ -526,7 +526,7 @@ async function refreshPanel(client: LanguageClient): Promise<void> {
     currentPanel.webview.html = getPlaceholderHtml(
       currentPanel.webview,
       "No type diagnostics here",
-      "Для текущей позиции не найдено понятной ошибки типизации. Синтаксические parser errors теперь не попадают в error trace: поставь курсор на выражение с type mismatch или ошибкой return type."
+      "No explainable type error was found at the current position. Parser syntax errors are excluded from the error trace; place the cursor on an expression with a type mismatch or return type error."
     );
     return;
   }

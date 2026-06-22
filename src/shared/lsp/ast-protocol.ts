@@ -1,8 +1,8 @@
 import type { AstViewModel } from "../analysis/analysis-types.js";
 
 /**
- * Пока сохраняем старое имя запроса, чтобы не ломать уже существующую логику.
- * Позже, если захочешь, можно переименовать в "stella/ast".
+ * Keep the existing request name to avoid breaking the current client logic.
+ * It can be renamed to "stella/ast" later if needed.
  */
 export const STELLA_AST_REQUEST = "stella/syntaxTree";
 

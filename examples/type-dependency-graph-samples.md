@@ -9,7 +9,7 @@ File: `examples/dependency-graph/application-mismatch.stella`
 Expected graph behavior:
 - selected expression: `takesNat(flag)`
 - nodes for `takesNat`, `flag`, and the enclosing function `main`
-- edge `flag -> takesNat(flag)` should be marked as a conflict because the function expects `Nat`, but `flag` has type `Bool`
+- edge `flag -> takesNat(flag)` should be displayed as an argument dependency; it is marked as a conflict only when the callee's function type is resolved and the expected `Nat` parameter type is available
 - the enclosing function `main` should appear as context on the left, with an incoming relation to the selected return expression
 
 ## 2. Conditional branch mismatch

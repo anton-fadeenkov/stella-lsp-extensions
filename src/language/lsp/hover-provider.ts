@@ -9,12 +9,12 @@ import { StellaServices } from "../stella-module.js";
 import { TypirStellaServices } from "../type-system/stella-type-checker.js";
 
 const SIMPLE_HOVER_MAP: Record<string, string> = {
-  if: "Ключевое слово условия.",
-  then: "Ветка, выполняемая при истинном условии.",
-  else: "Ветка, выполняемая при ложном условии.",
-  fn: "Определение анонимной функции.",
-  "{": "Открывающая скобка блока.",
-  "}": "Закрывающая скобка блока.",
+  if: "Conditional keyword.",
+  then: "Branch evaluated when the condition is true.",
+  else: "Branch evaluated when the condition is false.",
+  fn: "Anonymous function definition.",
+  "{": "Opening block brace.",
+  "}": "Closing block brace.",
 };
 
 export class HoverProvider extends AstNodeHoverProvider {
@@ -48,11 +48,11 @@ export class HoverProvider extends AstNodeHoverProvider {
       let value = `**${text}**\n\n${SIMPLE_HOVER_MAP[text]}`;
 
       if (astNode) {
-        value += `\n\n---\nAST узел: \`${astNode.$type}\``;
+        value += `\n\n---\nAST node: \`${astNode.$type}\``;
         const treeSnippet = formatAstNodeTree(astNode, 2);
 
         if (treeSnippet) {
-          value += `\n\nAST поддерево:\n\n\`\`\`stella-ast\n${treeSnippet}\n\`\`\``;
+          value += `\n\nAST subtree:\n\n\`\`\`stella-ast\n${treeSnippet}\n\`\`\``;
         }
       }
 
