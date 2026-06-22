@@ -1,0 +1,132 @@
+﻿\chapter{Evaluation}
+\label{chap:evaluation}
+\chaptermark{Evaluation}
+
+\section{Results Summary}
+
+The prototype was checked by the author using six manual scenarios. Table~\ref{tab:evaluation-results} presents the results first; the procedure and interpretation follow in the next sections.
+
+\begin{table}[H]
+\centering
+\caption{Results of the scenario-based functional evaluation}
+\label{tab:evaluation-results}
+\begin{tabular}{p{0.8cm}p{4.0cm}p{7.7cm}p{1.5cm}}
+\toprule
+\textbf{ID} & \textbf{Scenario} & \textbf{Observed result} & \textbf{Status} \\
+\midrule
+S1 & AST synchronization & Cursor and tree selection revealed matching source ranges. & Pass \\
+S2 & Context inspection & Bindings were grouped by introducing scope and displayed with types. & Pass \\
+S3 & Type derivation & Named rules, premises, conclusions, and source links were displayed. & Pass \\
+S4 & Error trace & The mismatch path was shown, while parser diagnostics were excluded. & Pass \\
+S5 & Dependency graph & Labeled dependencies and type conflicts were displayed. & Pass \\
+S6 & View separation & Five task-specific representations remained separate. & Pass \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The six scenarios satisfied the functional criteria R1--R5 for the tested examples. This confirms that the prototype exposes information needed for structural and type-oriented inspection and connects this information to source code.
+
+Following standard practice in empirical software engineering, the result must be interpreted narrowly~\cite{Wohlin2012Experimentation,RunesonHost2009}. It does not demonstrate that users read code faster, find errors faster, or learn type systems better. No participant group, control condition, completion-time measurement, accuracy measurement, or SUS questionnaire was used~\cite{Brooke1996SUS,Bangor2009SUS}. The evaluation therefore validates the implementation behavior, not a general improvement in readability or debugging effectiveness.
+
+\section{Evaluation Setup}
+
+The evaluation used the development version of the Visual Studio Code extension and small Stella programs with known expected structures. The author opened each program, placed the cursor on the specified expression, invoked the corresponding command, and compared the resulting view with the expected nodes, relations, type labels, and source ranges.
+
+Correct programs were used for AST, context, and derivation scenarios. Incorrect programs were used for return-type, function-argument, and conditional-branch mismatches. The input files, expected graph behavior, and error-trace examples are listed in Appendix~\ref{app:artifacts}.
+
+\section{Scenario Details}
+
+\subsection{S1: AST and Editor Synchronization}
+
+The AST scenario used a Stella program with nested functions and recursive natural-number operations. The cursor was moved between an outer function, a nested abstraction, and a variable reference. For every position, the AST panel selected the deepest node containing the cursor. Selecting the node in the tree revealed and highlighted the corresponding source range.
+
+This scenario checks locality (R1), source traceability (R3), and bidirectional navigation (R4). Figure~\ref{fig:ast} records one observed state.
+
+\subsection{S2: Scope and Context Inspection}
+
+The context scenario used nested parameters and local bindings. The expected result was not only a list of visible names but also separation by origin. At a nested abstraction, the panel displayed the local lambda parameter, parameters of the enclosing function, and program declarations in different frames. This output was treated as a concrete editor representation of the typing context $\Gamma$: each frame contributed assumptions of the form $x:T$ that were available for the selected expression.
+
+The scenario checks locality (R1), hierarchical explanation (R2), and source traceability (R3). Figure~\ref{fig:context} shows the frames and type labels observed in the panel.
+
+\subsection{S3: Type Derivation Inspection}
+
+The derivation scenario selected an expression ending in \texttt{succ(r)} inside nested abstractions. The expected path contained a variable rule, the successor rule, and abstraction rules. The webview displayed these premises and conclusions in proof form. Clicking a rule highlighted the source fragment associated with that derivation node.
+
+This scenario checks hierarchical explanation (R2), source traceability (R3), and bidirectional navigation (R4). The observed derivation is shown in Figure~\ref{fig:derivation}.
+
+\subsection{S4: Reverse Type-Error Trace}
+
+Two mismatch forms were checked. In the first, a function declared a \texttt{Bool} return type but returned \texttt{succ(n)} of type \texttt{Nat}. In the second, an \texttt{if} expression returned \texttt{Nat} in one branch and \texttt{Bool} in the other. The trace started from the relevant contract or conditional check and narrowed to the conflicting expression.
+
+A syntax-error example with an unclosed call was also opened. The expected behavior was a placeholder rather than a long type trace generated from parser token expectations. This scenario checks locality (R1), hierarchy (R2), source traceability (R3), and conflict indication (R5). Figure~\ref{fig:error-trace} shows the return-type case.
+
+\subsection{S5: Type Dependency Graph}
+
+Three programs were used:
+
+\begin{enumerate}
+    \item In \texttt{takesNat(flag)}, the function expects \texttt{Nat} while \texttt{flag} has type \texttt{Bool}. The argument relation was marked as conflicting.
+    \item In \texttt{if flag then 0 else false}, condition, \texttt{then}, and \texttt{else} edges were displayed. The condition was valid, while the incompatible branches were marked as a conflict.
+    \item In nested \texttt{let} expressions, value expressions were connected to binding nodes, and the bindings were connected to the final arithmetic expression.
+\end{enumerate}
+
+Each clickable graph node revealed its source fragment. This scenario checks locality (R1), source traceability (R3), bidirectional navigation (R4), and explicit conflict indication (R5).
+
+\subsection{S6: Separation of Views}
+
+For a correct program, the AST, context, and derivation views were opened. For an incorrect program, the error trace and dependency graph were added. Each view retained one primary role: syntax hierarchy, visible bindings, formal derivation, diagnostic narrowing, or dependency relations.
+
+This scenario supports the design decision not to combine all semantic information into a single panel. It checks hierarchical explanation (R2) and keeps each task small enough to inspect independently.
+
+\section{Comparison with the Standard Editor Output}
+
+Table~\ref{tab:baseline-comparison} compares information available through standard editor feedback with information exposed by the prototype. The comparison concerns interface capability, not user performance.
+
+\begin{table}[htbp]
+\centering
+\caption{Functional comparison of standard feedback and the developed views}
+\label{tab:baseline-comparison}
+\begin{tabular}{p{3.5cm}p{4.7cm}p{5.2cm}}
+\toprule
+\textbf{Task} & \textbf{Standard feedback} & \textbf{Developed extension} \\
+\midrule
+Inspect syntax & Source text and syntax highlighting & Expandable AST linked to exact source ranges \\
+Inspect available names & Completion and definition navigation & Frames showing origin, role, and type of active bindings \\
+Explain a type & Final type in hover or diagnostic & Premises, rule names, context, and conclusion \\
+Analyze a mismatch & Diagnostic message and underlined range & Reverse trace and conflict-marked dependencies \\
+Follow type relations & No Stella-specific graph & Local directed graph with labeled dependency edges \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The extension makes intermediate analysis data directly observable and reduces the need to reconstruct that data manually from a final message. Whether this capability produces a measurable improvement for students or developers remains an empirical question.
+
+\section{Threats to Validity}
+
+\subsection{Internal Validity}
+
+The same person developed and evaluated the prototype. This creates a confirmation-bias risk because the evaluator already knew the expected output and the intended interaction. No independent observer checked the scenario results.
+
+\subsection{Construct Validity}
+
+The criteria measure functional properties such as source linking, decomposition, and conflict marking. They are reasonable prerequisites for an explanatory tool, but they are not direct measurements of readability, debugging effectiveness, learning, or usability. Passing the scenarios must not be interpreted as proof of those broader qualities.
+
+\subsection{External Validity}
+
+The evaluation uses a small set of Stella programs and selected language constructs. More complex combinations of extensions, deeply nested patterns, polymorphic types, and larger files may produce different results. The findings also cannot be generalized from Stella to industrial programming languages without further evaluation.
+
+\subsection{Conclusion Validity}
+
+There was no participant sample and no statistical analysis. The evaluation provides categorical pass/fail observations only. It cannot estimate an effect size or establish a causal relationship between visualization and task performance.
+
+\subsection{Reliability and Reproducibility}
+
+The checks were performed manually, and there is no complete automated end-to-end suite for the Visual Studio Code interactions. The included examples and expected outputs improve reproducibility, but future work should add protocol-level tests and UI automation. A tagged artifact version should also be used for any later user study.
+
+\section{Chapter Summary}
+
+The scenario evaluation confirms that the implemented views provide the intended structures, navigation, and conflict markers for the tested programs. It answers RQ2 at the functional level. The strongest remaining limitation is the absence of a controlled user study; therefore, claims about improved readability or debugging speed are intentionally not made.
+
+
+
+

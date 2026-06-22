@@ -1,0 +1,311 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{EducationalTechnologyResearch}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=cf2ed991954beb5872de6e2354bfc59b}{%
+           family={Kogan},
+           familyi={K\bibinitperiod},
+           given={Genady},
+           giveni={G\bibinitperiod}}}%
+        {{hash=789ab67d0ba2c1f2931b64d4d58dd78a}{%
+           family={Chassidim},
+           familyi={C\bibinitperiod},
+           given={Hadas},
+           giveni={H\bibinitperiod}}}%
+        {{hash=7f70efa8ec693b5fecb832c946399e3c}{%
+           family={Rabaev},
+           familyi={R\bibinitperiod},
+           given={Irina},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{1c417599d21ac0f030e5ff78d87e582d}
+      \strng{fullhash}{7dbaa3195654b7d3541eec23e9c693c4}
+      \strng{fullhashraw}{7dbaa3195654b7d3541eec23e9c693c4}
+      \strng{bibnamehash}{7dbaa3195654b7d3541eec23e9c693c4}
+      \strng{authorbibnamehash}{7dbaa3195654b7d3541eec23e9c693c4}
+      \strng{authornamehash}{1c417599d21ac0f030e5ff78d87e582d}
+      \strng{authorfullhash}{7dbaa3195654b7d3541eec23e9c693c4}
+      \strng{authorfullhashraw}{7dbaa3195654b7d3541eec23e9c693c4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Educational Technology Research and Development}
+      \field{number}{4}
+      \field{title}{The Efficacy of Animation and Visualization in Teaching Data Structures: A Case Study}
+      \field{volume}{72}
+      \field{year}{2024}
+      \field{pages}{2349\bibrangedash 2372}
+      \range{pages}{24}
+      \verb{doi}
+      \verb 10.1007/s11423-024-10382-w
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/s11423-024-10382-w
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/s11423-024-10382-w
+      \endverb
+    \endentry
+    \entry{VisAST}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{hash=46e36ff698d34d2ce32d4928a5e58103}{%
+           family={Aalvik},
+           familyi={A\bibinitperiod},
+           given={Ragnhild},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {University of Bergen}%
+      }
+      \strng{namehash}{46e36ff698d34d2ce32d4928a5e58103}
+      \strng{fullhash}{46e36ff698d34d2ce32d4928a5e58103}
+      \strng{fullhashraw}{46e36ff698d34d2ce32d4928a5e58103}
+      \strng{bibnamehash}{46e36ff698d34d2ce32d4928a5e58103}
+      \strng{authorbibnamehash}{46e36ff698d34d2ce32d4928a5e58103}
+      \strng{authornamehash}{46e36ff698d34d2ce32d4928a5e58103}
+      \strng{authorfullhash}{46e36ff698d34d2ce32d4928a5e58103}
+      \strng{authorfullhashraw}{46e36ff698d34d2ce32d4928a5e58103}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: June 19, 2026}
+      \field{title}{{visAST}: Generic {AST} Visualiser for Software Language Education}
+      \field{type}{mathesis}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://hdl.handle.net/1956/19781
+      \endverb
+      \verb{url}
+      \verb https://hdl.handle.net/1956/19781
+      \endverb
+    \endentry
+    \entry{Abounegm2024Stella}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=48c1a0379ac90dd155bb796edca18a18}{%
+           family={Abounegm},
+           familyi={A\bibinitperiod},
+           given={Abdelrahman},
+           giveni={A\bibinitperiod}}}%
+        {{hash=bcf69e40c1cad9945d330ad143e3366c}{%
+           family={Kudasov},
+           familyi={K\bibinitperiod},
+           given={Nikolai},
+           giveni={N\bibinitperiod}}}%
+        {{hash=d07fac13049b531c98c20594c46d18a8}{%
+           family={Stepanov},
+           familyi={S\bibinitperiod},
+           given={Alexey},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{1863a642b4cc5f83dd3b2a692a55b0ef}
+      \strng{fullhash}{19e652d31c78901f655fa543fa2a5cb0}
+      \strng{fullhashraw}{19e652d31c78901f655fa543fa2a5cb0}
+      \strng{bibnamehash}{19e652d31c78901f655fa543fa2a5cb0}
+      \strng{authorbibnamehash}{19e652d31c78901f655fa543fa2a5cb0}
+      \strng{authornamehash}{1863a642b4cc5f83dd3b2a692a55b0ef}
+      \strng{authorfullhash}{19e652d31c78901f655fa543fa2a5cb0}
+      \strng{authorfullhashraw}{19e652d31c78901f655fa543fa2a5cb0}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.PL}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{Electronic Proceedings in Theoretical Computer Science}
+      \field{note}{Accessed: June 19, 2026}
+      \field{title}{Teaching Type Systems Implementation with {STELLA}, an Extensible Statically Typed Programming Language}
+      \field{year}{2024}
+      \verb{eprint}
+      \verb 2407.08089
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2407.08089
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2407.08089
+      \endverb
+    \endentry
+    \entry{Brooke1996SUS}{incollection}{}{}
+      \name{author}{1}{}{%
+        {{hash=813064283275c281401d7a7483420c67}{%
+           family={Brooke},
+           familyi={B\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+      }
+      \name{editor}{4}{}{%
+        {{hash=f4dd6dd0057b9630f3f5689c42ce3347}{%
+           family={Jordan},
+           familyi={J\bibinitperiod},
+           given={Patrick\bibnamedelima W.},
+           giveni={P\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=d72440e8326b04d0098a1a8e6ccab8bd}{%
+           family={Thomas},
+           familyi={T\bibinitperiod},
+           given={Bruce},
+           giveni={B\bibinitperiod}}}%
+        {{hash=8b8a10905f0d3cfa60d8b1742260677d}{%
+           family={McClelland},
+           familyi={M\bibinitperiod},
+           given={Ian\bibnamedelima L.},
+           giveni={I\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=53a489c557b52c80bdfe5964b39ea821}{%
+           family={Weerdmeester},
+           familyi={W\bibinitperiod},
+           given={Bernard},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {London}%
+      }
+      \list{publisher}{1}{%
+        {Taylor \& Francis}%
+      }
+      \strng{namehash}{813064283275c281401d7a7483420c67}
+      \strng{fullhash}{813064283275c281401d7a7483420c67}
+      \strng{fullhashraw}{813064283275c281401d7a7483420c67}
+      \strng{bibnamehash}{813064283275c281401d7a7483420c67}
+      \strng{authorbibnamehash}{813064283275c281401d7a7483420c67}
+      \strng{authornamehash}{813064283275c281401d7a7483420c67}
+      \strng{authorfullhash}{813064283275c281401d7a7483420c67}
+      \strng{authorfullhashraw}{813064283275c281401d7a7483420c67}
+      \strng{editorbibnamehash}{e197d41591a21bcd5e67a9b4c5c12e54}
+      \strng{editornamehash}{161df31cfda2ca59b22c7e189ab9aca4}
+      \strng{editorfullhash}{e197d41591a21bcd5e67a9b4c5c12e54}
+      \strng{editorfullhashraw}{e197d41591a21bcd5e67a9b4c5c12e54}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Usability Evaluation in Industry}
+      \field{title}{{SUS}: A Quick and Dirty Usability Scale}
+      \field{year}{1996}
+      \field{pages}{189\bibrangedash 194}
+      \range{pages}{6}
+    \endentry
+    \entry{Types}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=7365a4e827c2dfa2c5af0c0ec4c18c27}{%
+           family={Pierce},
+           familyi={P\bibinitperiod},
+           given={Benjamin\bibnamedelima C.},
+           giveni={B\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cambridge, MA}%
+      }
+      \list{publisher}{1}{%
+        {MIT Press}%
+      }
+      \strng{namehash}{7365a4e827c2dfa2c5af0c0ec4c18c27}
+      \strng{fullhash}{7365a4e827c2dfa2c5af0c0ec4c18c27}
+      \strng{fullhashraw}{7365a4e827c2dfa2c5af0c0ec4c18c27}
+      \strng{bibnamehash}{7365a4e827c2dfa2c5af0c0ec4c18c27}
+      \strng{authorbibnamehash}{7365a4e827c2dfa2c5af0c0ec4c18c27}
+      \strng{authornamehash}{7365a4e827c2dfa2c5af0c0ec4c18c27}
+      \strng{authorfullhash}{7365a4e827c2dfa2c5af0c0ec4c18c27}
+      \strng{authorfullhashraw}{7365a4e827c2dfa2c5af0c0ec4c18c27}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0-262-16209-8}
+      \field{title}{Types and Programming Languages}
+      \field{year}{2002}
+    \endentry
+    \entry{MicrosoftLSP}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=140864078aeca1c7c35b4beb33c53c34}{%
+           family={{Microsoft}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{fullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{fullhashraw}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{bibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorbibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authornamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorfullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorfullhashraw}{140864078aeca1c7c35b4beb33c53c34}
+      \field{extraname}{1}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://microsoft.github.io/language-server-protocol/}}
+      \field{note}{Accessed: June 19, 2026}
+      \field{title}{Language Server Protocol Specification}
+      \field{year}{2024}
+    \endentry
+    \entry{MicrosoftVS}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=140864078aeca1c7c35b4beb33c53c34}{%
+           family={{Microsoft}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{fullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{fullhashraw}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{bibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorbibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authornamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorfullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorfullhashraw}{140864078aeca1c7c35b4beb33c53c34}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://code.visualstudio.com/api}}
+      \field{note}{Accessed: June 19, 2026}
+      \field{title}{Visual Studio Code Extension API}
+      \field{year}{2026}
+    \endentry
+    \entry{LangiumDocs}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=3af390ed3da1623ac82b5a1bf48ebd1f}{%
+           family={{TypeFox}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{3af390ed3da1623ac82b5a1bf48ebd1f}
+      \strng{fullhash}{3af390ed3da1623ac82b5a1bf48ebd1f}
+      \strng{fullhashraw}{3af390ed3da1623ac82b5a1bf48ebd1f}
+      \strng{bibnamehash}{3af390ed3da1623ac82b5a1bf48ebd1f}
+      \strng{authorbibnamehash}{3af390ed3da1623ac82b5a1bf48ebd1f}
+      \strng{authornamehash}{3af390ed3da1623ac82b5a1bf48ebd1f}
+      \strng{authorfullhash}{3af390ed3da1623ac82b5a1bf48ebd1f}
+      \strng{authorfullhashraw}{3af390ed3da1623ac82b5a1bf48ebd1f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://langium.org/docs/}}
+      \field{note}{Accessed: June 19, 2026}
+      \field{title}{Langium Documentation}
+      \field{year}{2026}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

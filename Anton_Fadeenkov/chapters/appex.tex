@@ -1,0 +1,79 @@
+﻿\appendix
+\chapter{Artifacts and Reproduction}
+\label{app:artifacts}
+\sloppy
+
+\section{Artifact Location}
+
+The development repository is available at
+\begin{center}
+\url{https://github.com/friji350/stella-lsp-extensions}.
+\end{center}
+
+The submitted thesis archive contains the exact source revision used for the screenshots and manual scenarios. Because the development repository may change, evaluation should use the submitted archive or a release tag associated with the thesis.
+
+\section{Build and Launch}
+
+The following commands are executed from the repository root:
+
+\begin{enumerate}
+    \item Install dependencies with \texttt{npm install}.
+    \item Build the extension with \texttt{npm run build}.
+    \item Open the repository in Visual Studio Code.
+    \item Start an Extension Development Host and open one of the validation \texttt{.stella} files.
+\end{enumerate}
+
+The commands above reproduce the implementation used for the manual scenarios. The Visual Studio Code commands exposed by the artifact are \texttt{Stella: Show Type Derivation}, \texttt{Stella: Show Type Error Trace}, \texttt{Stella: Show Type Dependency Graph}, and \texttt{Stella: Show AST (JSON)}.
+
+\section{Implementation Map}
+
+The main implementation artifacts are listed below.
+
+\begin{itemize}
+    \item \textbf{AST visualization:}
+    client: \path{src/extension/syntax-tree.ts};
+    server: \path{src/language/lsp/syntax-request.ts}.
+
+    \item \textbf{Scope and context:}
+    client: \path{src/extension/scope-view.ts};
+    server: \path{src/language/lsp/scope-request.ts}.
+
+    \item \textbf{Type derivation:}
+    client: \path{src/extension/type-derivation-panel.ts};
+    server: \path{src/language/lsp/type-derivation-request.ts}.
+
+    \item \textbf{Type-error trace:}
+    client: \path{src/extension/type-error-trace-panel.ts};
+    server: \path{src/language/lsp/type-error-trace-request.ts}.
+
+    \item \textbf{Type dependency graph:}
+    client: \path{src/extension/type-dependency-graph-panel.ts};
+    server: \path{src/language/lsp/type-dependency-graph-request.ts}.
+
+    \item \textbf{Shared response structures:}
+    \path{src/shared/lsp} and \path{src/shared/analysis}.
+\end{itemize}
+
+\section{Validation Inputs}
+
+The validation files are included with the artifact:
+
+\begin{itemize}
+    \item dependency-graph programs: \path{examples/dependency-graph};
+    \item expected dependency nodes and edges: \path{examples/type-dependency-graph-samples.md};
+    \item error-trace inputs and expected rules: \path{examples/error-trace-samples.md}.
+\end{itemize}
+
+To repeat a manual scenario:
+
+\begin{enumerate}
+    \item Open a listed \texttt{.stella} file in the Extension Development Host.
+    \item Place the cursor on the expression named in the scenario description.
+    \item Run the corresponding \texttt{Stella: Show ...} command.
+    \item Compare nodes, type labels, edge labels, and conflict markers with the documented expectation.
+    \item Click visual elements and verify that the expected source ranges are revealed.
+\end{enumerate}
+
+The screenshots used in Chapter~\ref{chap:implementation} are stored in
+\path{Anton_Fadeenkov/figs}.
+

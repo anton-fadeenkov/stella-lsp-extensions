@@ -1,202 +1,259 @@
 import * as vscode from "vscode";
-import { AstNodeWithTextRegion } from "langium";
 import { LanguageClient } from "vscode-languageclient/node.js";
+import type {
+  AnalysisRange,
+  AstViewModel,
+  AstViewNode,
+} from "../shared/analysis/analysis-types.js";
+import type { AstRequestResult } from "../shared/lsp/ast-protocol.js";
+import { STELLA_AST_REQUEST } from "../shared/lsp/ast-protocol.js";
 
-type Node = Required<Pick<AstNodeWithTextRegion, "$type" | "$textRegion">> & {
-  [key: string]: Node | LangiumValue;
-};
+export function toVscodeRange(range?: AnalysisRange): vscode.Range | undefined {
+  if (!range) {
+    return undefined;
+  }
 
-/** The types allowed in a terminal rule's returns type */
-type LangiumPrimitive = string | number | boolean | bigint | Date;
-type LangiumValue = LangiumPrimitive | LangiumPrimitive[];
-type NodeProperty = {
-  key: string;
-  value: LangiumValue | Node;
-  ranges: vscode.Range | vscode.Range[];
-};
-
-type Element = Node | NodeProperty | LangiumValue;
-
-function isNode(value: unknown): value is Node {
-  return (
-    typeof value === "object" &&
-    value !== null &&
-    "$type" in value &&
-    "$textRegion" in value
+  return new vscode.Range(
+    new vscode.Position(range.start.line, range.start.character),
+    new vscode.Position(range.end.line, range.end.character)
   );
 }
 
-function isNodeProperty(value: unknown): value is NodeProperty {
+function formatRange(range?: AnalysisRange): string | undefined {
+  if (!range) {
+    return undefined;
+  }
+
+  return `${range.start.line + 1}:${range.start.character + 1} - ${
+    range.end.line + 1
+  }:${range.end.character + 1}`;
+}
+
+function comparePositions(
+  left: vscode.Position,
+  right: vscode.Position
+): number {
+  if (left.line < right.line) {
+    return -1;
+  }
+  if (left.line > right.line) {
+    return 1;
+  }
+  if (left.character < right.character) {
+    return -1;
+  }
+  if (left.character > right.character) {
+    return 1;
+  }
+  return 0;
+}
+
+function containsPosition(
+  range: AnalysisRange | undefined,
+  position: vscode.Position
+): boolean {
+  if (!range) {
+    return false;
+  }
+
+  const start = new vscode.Position(range.start.line, range.start.character);
+  const end = new vscode.Position(range.end.line, range.end.character);
+
   return (
-    typeof value === "object" &&
-    value !== null &&
-    "key" in value &&
-    "value" in value
+    comparePositions(position, start) >= 0 &&
+    comparePositions(position, end) <= 0
   );
 }
 
-function isLangiumPrimitive(value: unknown): value is LangiumPrimitive {
-  return (
-    typeof value === "string" ||
-    typeof value === "number" ||
-    typeof value === "boolean" ||
-    value instanceof Date ||
-    typeof value === "bigint"
-  );
+function findDeepestContainingNode(
+  node: AstViewNode,
+  position: vscode.Position
+): AstViewNode | undefined {
+  if (!containsPosition(node.range, position)) {
+    return undefined;
+  }
+
+  for (const child of node.children) {
+    const match = findDeepestContainingNode(child, position);
+    if (match) {
+      return match;
+    }
+  }
+
+  return node;
 }
 
-export class SyntaxTreeProvider implements vscode.TreeDataProvider<Element> {
-  constructor(private client: LanguageClient) {}
+export class SyntaxTreeProvider
+  implements vscode.TreeDataProvider<AstViewNode>
+{
+  private readonly _onDidChangeTreeData = new vscode.EventEmitter<
+    AstViewNode | undefined | void
+  >();
 
-  private _onDidChangeTreeData: vscode.EventEmitter<void> =
-    new vscode.EventEmitter();
-  readonly onDidChangeTreeData: vscode.Event<void> =
-    this._onDidChangeTreeData.event;
+  readonly onDidChangeTreeData = this._onDidChangeTreeData.event;
+
+  private currentTree?: AstViewModel;
+  private currentUri?: string;
+  private parentById = new Map<string, AstViewNode | undefined>();
+  private pendingLoad?: Promise<AstViewModel | undefined>;
+  private pendingLoadUri?: string;
+
+  constructor(private readonly client: LanguageClient) {}
 
   refresh(): void {
+    this.currentTree = undefined;
+    this.currentUri = undefined;
+    this.parentById.clear();
+    this.pendingLoad = undefined;
+    this.pendingLoadUri = undefined;
     this._onDidChangeTreeData.fire();
   }
 
-  async getChildren(element?: Element): Promise<Element[]> {
-    if (!element) {
-      // First request (for whole document), get the AST from the language server
-      const document = vscode.window.activeTextEditor?.document;
-      if (!document || document.languageId !== "stella") {
-        return [];
-      }
-      const uri = document.uri.toString();
+  getTreeItem(element: AstViewNode): vscode.TreeItem {
+    const hasChildren = element.children.length > 0;
 
-      const tree = await this.client.sendRequest<string>("stella/syntaxTree", {
-        uri,
-      });
+    const item = new vscode.TreeItem(
+      element.label,
+      hasChildren
+        ? vscode.TreeItemCollapsibleState.Collapsed
+        : vscode.TreeItemCollapsibleState.None
+    );
 
-      return [JSON.parse(tree) as Node];
+    item.description = element.edgeLabel;
+    item.iconPath = new vscode.ThemeIcon(
+      hasChildren ? "symbol-struct" : "symbol-field"
+    );
+
+    const tooltipLines: string[] = [
+      `type: ${element.type}`,
+      `id: ${element.id}`,
+    ];
+
+    const rangeText = formatRange(element.range);
+    if (rangeText) {
+      tooltipLines.push(`range: ${rangeText}`);
     }
 
-    if (isNode(element)) {
-      // Get all non-$ properties of the AST node
-      return Object.entries<Node | LangiumValue>(element)
-        .filter(([key, _]) => !key.startsWith("$"))
-        .map(([key, value]) => {
-          return {
-            key,
-            value,
-            // If the value is an array, `assignments[key]` will contain the ranges of each element
-            ranges:
-              element.$textRegion.assignments?.[key]?.map(
-                (segment) => segment.range as vscode.Range
-              ) ?? [],
-          };
-        });
+    if (element.truncated) {
+      tooltipLines.push("children hidden because of depth limit");
     }
-    if (isNodeProperty(element)) {
-      const { value } = element;
-      if (Array.isArray(value)) {
-        return value;
-      }
-      return [value];
-    }
-    return [];
+
+    item.tooltip = tooltipLines.join("\n");
+    item.contextValue = "astNode";
+
+    return item;
   }
 
-  getTreeItem(element: Element): vscode.TreeItem {
-    const typeIcons: Record<string, string> = {
-      bigint: "symbol-number",
-      number: "symbol-number",
-      string: "symbol-text",
-      boolean: "symbol-boolean",
-      object: "calendar", // Date is the only object treated by Langium as a terminal token
+  async getChildren(element?: AstViewNode): Promise<AstViewNode[]> {
+    if (element) {
+      return element.children;
+    }
+
+    const document = vscode.window.activeTextEditor?.document;
+    if (!document || document.languageId !== "stella") {
+      return [];
+    }
+
+    const tree = await this.loadTreeForDocument(document);
+    if (!tree) {
+      return [];
+    }
+
+    return [tree.root];
+  }
+
+  getParent(element: AstViewNode): AstViewNode | undefined {
+    return this.parentById.get(element.id);
+  }
+
+  getPathToRoot(element: AstViewNode): AstViewNode[] {
+    const path: AstViewNode[] = [];
+    let current: AstViewNode | undefined = element;
+
+    while (current) {
+      path.unshift(current);
+      current = this.parentById.get(current.id);
+    }
+
+    return path;
+  }
+
+  async getTreeForActiveDocument(): Promise<AstViewModel | undefined> {
+    const document = vscode.window.activeTextEditor?.document;
+    if (!document || document.languageId !== "stella") {
+      return undefined;
+    }
+
+    return this.loadTreeForDocument(document);
+  }
+
+  async findNodeAtPosition(
+    document: vscode.TextDocument,
+    position: vscode.Position
+  ): Promise<AstViewNode | undefined> {
+    const tree = await this.loadTreeForDocument(document);
+    if (!tree) {
+      return undefined;
+    }
+
+    return findDeepestContainingNode(tree.root, position);
+  }
+
+  private async loadTreeForDocument(
+    document: vscode.TextDocument
+  ): Promise<AstViewModel | undefined> {
+    const uri = document.uri.toString();
+
+    if (this.currentTree && this.currentUri === uri) {
+      return this.currentTree;
+    }
+
+    if (this.pendingLoad && this.pendingLoadUri === uri) {
+      return this.pendingLoad;
+    }
+
+    this.pendingLoadUri = uri;
+    this.pendingLoad = this.client
+      .sendRequest<AstRequestResult>(STELLA_AST_REQUEST, {
+        uri,
+      })
+      .then((tree) => {
+        if (!tree) {
+          this.currentTree = undefined;
+          this.currentUri = undefined;
+          this.parentById.clear();
+          return undefined;
+        }
+
+        this.currentTree = tree;
+        this.currentUri = uri;
+        this.rebuildParentIndex(tree.root);
+
+        return tree;
+      })
+      .finally(() => {
+        this.pendingLoad = undefined;
+        this.pendingLoadUri = undefined;
+      });
+
+    return this.pendingLoad;
+  }
+
+  private rebuildParentIndex(root: AstViewNode): void {
+    this.parentById.clear();
+
+    const visit = (
+      node: AstViewNode,
+      parent: AstViewNode | undefined
+    ): void => {
+      this.parentById.set(node.id, parent);
+
+      for (const child of node.children) {
+        visit(child, node);
+      }
     };
 
-    if (isLangiumPrimitive(element)) {
-      return {
-        label: element.toString(),
-        iconPath: new vscode.ThemeIcon(
-          typeIcons[typeof element] ?? "symbol-property"
-        ),
-        command: {
-          command: "stella.highlightRegion",
-          title: "Highlight Region",
-          arguments: [[]],
-        },
-      };
-    }
-    if (isNode(element)) {
-      const isEmpty = Object.keys(element).length === 2; // `2` because of $type and $textRegion
-      return {
-        label: element.$type,
-        description: isEmpty ? "= {}" : undefined,
-        iconPath: new vscode.ThemeIcon("symbol-struct"),
-        command: {
-          command: "stella.highlightRegion",
-          title: "Highlight Region",
-          arguments: [element.$textRegion.range],
-        },
-        collapsibleState: isEmpty
-          ? vscode.TreeItemCollapsibleState.None
-          : vscode.TreeItemCollapsibleState.Collapsed,
-      };
-    }
-    if (Array.isArray(element)) {
-      // A single tree item cannot be an array of primitives
-      return { label: "Error!" };
-    }
-
-    const { key, value, ranges } = element;
-    if (isLangiumPrimitive(value)) {
-      return {
-        label: key,
-        description: `= ${value}`,
-        iconPath: new vscode.ThemeIcon(
-          typeIcons[typeof value] ?? "symbol-property"
-        ),
-        command: {
-          command: "stella.highlightRegion",
-          title: "Highlight Region",
-          arguments: [ranges],
-        },
-      };
-    }
-    if (Array.isArray(value)) {
-      const isEmpty = value.length === 0;
-      return {
-        label: key,
-        description: isEmpty ? "= []" : undefined,
-        iconPath: new vscode.ThemeIcon("symbol-array"),
-        command: {
-          command: "stella.highlightRegion",
-          title: "Highlight Region",
-          arguments: [ranges],
-        },
-        collapsibleState: isEmpty
-          ? vscode.TreeItemCollapsibleState.None
-          : vscode.TreeItemCollapsibleState.Collapsed,
-      };
-    }
-
-    if ("$ref" in value) {
-      return {
-        label: key,
-        iconPath: new vscode.ThemeIcon("symbol-reference"),
-        command: {
-          command: "stella.highlightRegion",
-          title: "Highlight Region",
-          arguments: [ranges],
-        },
-        description: `Ref<${value.$refText}>`,
-      };
-    }
-
-    return {
-      label: key,
-      iconPath: new vscode.ThemeIcon("symbol-property"),
-      command: {
-        command: "stella.highlightRegion",
-        title: "Highlight Region",
-        arguments: [value.$textRegion.range],
-      },
-      collapsibleState: vscode.TreeItemCollapsibleState.Collapsed,
-    };
+    visit(root, undefined);
   }
 }
 

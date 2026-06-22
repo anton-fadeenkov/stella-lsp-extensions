@@ -5,44 +5,87 @@ import type {
 import * as vscode from "vscode";
 import * as path from "node:path";
 import { LanguageClient, TransportKind } from "vscode-languageclient/node.js";
-import { highlightDecorationType, SyntaxTreeProvider } from "./syntax-tree.js";
+import { AstSyncController } from "./ast-sync-controller.js";
+import { ScopeViewProvider } from "./scope-view.js";
+import {
+  highlightDecorationType,
+  SyntaxTreeProvider,
+} from "./syntax-tree.js";
+import { registerShowAstJsonCommand } from "./show-ast-command.js";
+import { showTypeDerivationPanel } from "./type-derivation-panel.js";
+import { showTypeErrorTracePanel } from "./type-error-trace-panel.js";
+import { showTypeDependencyGraphPanel } from "./type-dependency-graph-panel.js";
 
 let client: LanguageClient;
 
-// This function is called when the extension is activated.
 export function activate(context: vscode.ExtensionContext): void {
   client = startLanguageClient(context);
 
-  const treeProvider = new SyntaxTreeProvider(client);
-  vscode.window.registerTreeDataProvider("syntaxTree", treeProvider);
-  vscode.window.onDidChangeActiveTextEditor((editor) => {
-    if (editor?.document.languageId === "stella") {
-      treeProvider.refresh();
-    }
+  const syntaxTreeProvider = new SyntaxTreeProvider(client);
+  const scopeViewProvider = new ScopeViewProvider(client);
+
+  const syntaxTreeView = vscode.window.createTreeView("syntaxTree", {
+    treeDataProvider: syntaxTreeProvider,
+    showCollapseAll: true,
   });
-  vscode.workspace.onDidChangeTextDocument(() => {
-    vscode.window.activeTextEditor?.setDecorations(highlightDecorationType, []);
+
+  const scopeTreeView = vscode.window.createTreeView("scopeContext", {
+    treeDataProvider: scopeViewProvider,
+    showCollapseAll: true,
   });
-  vscode.workspace.onDidSaveTextDocument(() => {
-    if (vscode.window.activeTextEditor?.document.languageId === "stella") {
-      treeProvider.refresh();
-    }
-  });
-  vscode.commands.registerCommand(
-    "stella.highlightRegion",
-    (ranges: vscode.Range | vscode.Range[]) => {
-      vscode.window.activeTextEditor?.setDecorations(
-        highlightDecorationType,
-        Array.isArray(ranges) ? ranges : [ranges]
-      );
-    }
+
+  const astSyncController = new AstSyncController(
+    syntaxTreeProvider,
+    syntaxTreeView,
+    scopeViewProvider
   );
-  vscode.commands.registerCommand("stella.refreshSyntaxTree", () => {
-    treeProvider.refresh();
-  });
+
+  context.subscriptions.push(
+    syntaxTreeView,
+    scopeTreeView,
+    scopeViewProvider,
+    astSyncController,
+
+    vscode.commands.registerCommand(
+      "stella.highlightRegion",
+      (ranges: vscode.Range | vscode.Range[]) => {
+        const editor = vscode.window.activeTextEditor;
+        if (!editor) {
+          return;
+        }
+
+        const normalizedRanges = Array.isArray(ranges) ? ranges : [ranges];
+
+        editor.revealRange(
+          normalizedRanges[0],
+          vscode.TextEditorRevealType.InCenter
+        );
+        editor.setDecorations(highlightDecorationType, normalizedRanges);
+      }
+    ),
+
+    vscode.commands.registerCommand("stella.refreshSyntaxTree", () => {
+      astSyncController.refreshAndSync();
+    }),
+
+    vscode.commands.registerCommand("stella.showTypeDerivation", () =>
+      showTypeDerivationPanel(client, context)
+    ),
+
+    vscode.commands.registerCommand("stella.showTypeErrorTrace", () =>
+      showTypeErrorTracePanel(client, context)
+    ),
+
+    vscode.commands.registerCommand("stella.showTypeDependencyGraph", () =>
+      showTypeDependencyGraphPanel(client, context)
+    ),
+
+    registerShowAstJsonCommand(client)
+  );
+
+  void astSyncController.syncToActiveEditor();
 }
 
-// This function is called when the extension is deactivated.
 export function deactivate(): Thenable<void> | undefined {
   if (client) {
     return client.stop();
@@ -54,9 +97,7 @@ function startLanguageClient(context: vscode.ExtensionContext): LanguageClient {
   const serverModule = context.asAbsolutePath(
     path.join("out", "language", "main.cjs")
   );
-  // The debug options for the server
-  // --inspect=6009: runs the server in Node's Inspector mode so VS Code can attach to the server for debugging.
-  // By setting `process.env.DEBUG_BREAK` to a truthy value, the language server will wait until a debugger is attached.
+
   const debugOptions = {
     execArgv: [
       "--nolazy",
@@ -66,8 +107,6 @@ function startLanguageClient(context: vscode.ExtensionContext): LanguageClient {
     ],
   };
 
-  // If the extension is launched in debug mode then the debug server options are used
-  // Otherwise the run options are used
   const serverOptions: ServerOptions = {
     run: { module: serverModule, transport: TransportKind.ipc },
     debug: {
@@ -77,12 +116,10 @@ function startLanguageClient(context: vscode.ExtensionContext): LanguageClient {
     },
   };
 
-  // Options to control the language client
   const clientOptions: LanguageClientOptions = {
     documentSelector: [{ scheme: "*", language: "stella" }],
   };
 
-  // Create the language client and start the client.
   const client = new LanguageClient(
     "stella",
     "Stella",
@@ -90,7 +127,6 @@ function startLanguageClient(context: vscode.ExtensionContext): LanguageClient {
     clientOptions
   );
 
-  // Start the client. This will also launch the server
   client.start();
   return client;
 }

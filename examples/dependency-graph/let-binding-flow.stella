@@ -1,0 +1,8 @@
+language core;
+
+extend with
+  #natural-literals;
+
+fn addBindings(n : Nat) -> Nat {
+  return let x = succ(n) in let y = succ(succ(n)) in x + y
+}

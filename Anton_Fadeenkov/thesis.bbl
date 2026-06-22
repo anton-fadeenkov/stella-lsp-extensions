@@ -1,0 +1,1272 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{Types}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=7365a4e827c2dfa2c5af0c0ec4c18c27}{%
+           family={Pierce},
+           familyi={P\bibinitperiod},
+           given={Benjamin\bibnamedelima C.},
+           giveni={B\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cambridge, MA}%
+      }
+      \list{publisher}{1}{%
+        {MIT Press}%
+      }
+      \strng{namehash}{7365a4e827c2dfa2c5af0c0ec4c18c27}
+      \strng{fullhash}{7365a4e827c2dfa2c5af0c0ec4c18c27}
+      \strng{fullhashraw}{7365a4e827c2dfa2c5af0c0ec4c18c27}
+      \strng{bibnamehash}{7365a4e827c2dfa2c5af0c0ec4c18c27}
+      \strng{authorbibnamehash}{7365a4e827c2dfa2c5af0c0ec4c18c27}
+      \strng{authornamehash}{7365a4e827c2dfa2c5af0c0ec4c18c27}
+      \strng{authorfullhash}{7365a4e827c2dfa2c5af0c0ec4c18c27}
+      \strng{authorfullhashraw}{7365a4e827c2dfa2c5af0c0ec4c18c27}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0-262-16209-8}
+      \field{title}{Types and Programming Languages}
+      \field{year}{2002}
+    \endentry
+    \entry{HarperPFPL}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=73259fe928ce8add0f265e234f8de3a6}{%
+           family={Harper},
+           familyi={H\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{73259fe928ce8add0f265e234f8de3a6}
+      \strng{fullhash}{73259fe928ce8add0f265e234f8de3a6}
+      \strng{fullhashraw}{73259fe928ce8add0f265e234f8de3a6}
+      \strng{bibnamehash}{73259fe928ce8add0f265e234f8de3a6}
+      \strng{authorbibnamehash}{73259fe928ce8add0f265e234f8de3a6}
+      \strng{authornamehash}{73259fe928ce8add0f265e234f8de3a6}
+      \strng{authorfullhash}{73259fe928ce8add0f265e234f8de3a6}
+      \strng{authorfullhashraw}{73259fe928ce8add0f265e234f8de3a6}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2}
+      \field{title}{Practical Foundations for Programming Languages}
+      \field{year}{2016}
+      \verb{doi}
+      \verb 10.1017/CBO9781316576892
+      \endverb
+    \endentry
+    \entry{Gao2017TypeNotType}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=00cc05ed9833a4f7eb071be88b1f9ad0}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={Zheng},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=7b11a8af9b466161096907a7d8c2476d}{%
+           family={Bird},
+           familyi={B\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod}}}%
+        {{hash=da5b7b8e6c4783fac2351cb9c4f016c4}{%
+           family={Barr},
+           familyi={B\bibinitperiod},
+           given={Earl\bibnamedelima T.},
+           giveni={E\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+      }
+      \strng{namehash}{c2fd8c35e3daef54087b03cc4b4d7e25}
+      \strng{fullhash}{5d7e2704234727cf23a5be0ba6bbc454}
+      \strng{fullhashraw}{5d7e2704234727cf23a5be0ba6bbc454}
+      \strng{bibnamehash}{5d7e2704234727cf23a5be0ba6bbc454}
+      \strng{authorbibnamehash}{5d7e2704234727cf23a5be0ba6bbc454}
+      \strng{authornamehash}{c2fd8c35e3daef54087b03cc4b4d7e25}
+      \strng{authorfullhash}{5d7e2704234727cf23a5be0ba6bbc454}
+      \strng{authorfullhashraw}{5d7e2704234727cf23a5be0ba6bbc454}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 39th International Conference on Software Engineering}
+      \field{title}{To Type or Not to Type: Quantifying Detectable Bugs in {JavaScript}}
+      \field{year}{2017}
+      \field{pages}{758\bibrangedash 769}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1109/ICSE.2017.75
+      \endverb
+    \endentry
+    \entry{Hanenberg2010StaticDynamic}{inproceedings}{}{}
+      \name{author}{1}{}{%
+        {{hash=252f42dbc9a8190ba7cbfaeb87376b41}{%
+           family={Hanenberg},
+           familyi={H\bibinitperiod},
+           given={Stefan},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{252f42dbc9a8190ba7cbfaeb87376b41}
+      \strng{fullhash}{252f42dbc9a8190ba7cbfaeb87376b41}
+      \strng{fullhashraw}{252f42dbc9a8190ba7cbfaeb87376b41}
+      \strng{bibnamehash}{252f42dbc9a8190ba7cbfaeb87376b41}
+      \strng{authorbibnamehash}{252f42dbc9a8190ba7cbfaeb87376b41}
+      \strng{authornamehash}{252f42dbc9a8190ba7cbfaeb87376b41}
+      \strng{authorfullhash}{252f42dbc9a8190ba7cbfaeb87376b41}
+      \strng{authorfullhashraw}{252f42dbc9a8190ba7cbfaeb87376b41}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 2010 ACM International Conference on Object Oriented Programming Systems Languages and Applications}
+      \field{title}{An Experiment About Static and Dynamic Type Systems: Doubts About the Positive Impact of Static Type Systems on Development Time}
+      \field{year}{2010}
+      \field{pages}{22\bibrangedash 35}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1145/1932682.1869462
+      \endverb
+    \endentry
+    \entry{DragonBook}{book}{}{}
+      \name{author}{4}{}{%
+        {{hash=87e9142329f09390b038692270dc2168}{%
+           family={Aho},
+           familyi={A\bibinitperiod},
+           given={Alfred\bibnamedelima V.},
+           giveni={A\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=2935cefbbdea2e46ed9635bd5cf1db28}{%
+           family={Lam},
+           familyi={L\bibinitperiod},
+           given={Monica\bibnamedelima S.},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=b0e677112f976b0ff780553fcb888351}{%
+           family={Sethi},
+           familyi={S\bibinitperiod},
+           given={Ravi},
+           giveni={R\bibinitperiod}}}%
+        {{hash=cafe1d770c56825ebccdb81e9f7c9b3b}{%
+           family={Ullman},
+           familyi={U\bibinitperiod},
+           given={Jeffrey\bibnamedelima D.},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Pearson}%
+      }
+      \strng{namehash}{e81f18fe5b19a688d5145730fb236624}
+      \strng{fullhash}{b955b20997f1b0d8317cbada66b20151}
+      \strng{fullhashraw}{b955b20997f1b0d8317cbada66b20151}
+      \strng{bibnamehash}{b955b20997f1b0d8317cbada66b20151}
+      \strng{authorbibnamehash}{b955b20997f1b0d8317cbada66b20151}
+      \strng{authornamehash}{e81f18fe5b19a688d5145730fb236624}
+      \strng{authorfullhash}{b955b20997f1b0d8317cbada66b20151}
+      \strng{authorfullhashraw}{b955b20997f1b0d8317cbada66b20151}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2}
+      \field{isbn}{978-0-321-48681-3}
+      \field{title}{Compilers: Principles, Techniques, and Tools}
+      \field{year}{2006}
+    \endentry
+    \entry{Price1993Taxonomy}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=a8bb921765bacf84d182784492463f60}{%
+           family={Price},
+           familyi={P\bibinitperiod},
+           given={Blaine\bibnamedelima A.},
+           giveni={B\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=e898a1e08e5bff0c026c46eded42fd61}{%
+           family={Baecker},
+           familyi={B\bibinitperiod},
+           given={Ronald\bibnamedelima M.},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=46ac8062a562a49e67c799055e04e6ce}{%
+           family={Small},
+           familyi={S\bibinitperiod},
+           given={Ian\bibnamedelima S.},
+           giveni={I\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{0f4d805a040f35fd2c5fd25896423e7f}
+      \strng{fullhash}{89693c82450ef5b148fc22bdec328706}
+      \strng{fullhashraw}{89693c82450ef5b148fc22bdec328706}
+      \strng{bibnamehash}{89693c82450ef5b148fc22bdec328706}
+      \strng{authorbibnamehash}{89693c82450ef5b148fc22bdec328706}
+      \strng{authornamehash}{0f4d805a040f35fd2c5fd25896423e7f}
+      \strng{authorfullhash}{89693c82450ef5b148fc22bdec328706}
+      \strng{authorfullhashraw}{89693c82450ef5b148fc22bdec328706}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Visual Languages and Computing}
+      \field{number}{3}
+      \field{title}{A Principled Taxonomy of Software Visualization}
+      \field{volume}{4}
+      \field{year}{1993}
+      \field{pages}{211\bibrangedash 266}
+      \range{pages}{56}
+      \verb{doi}
+      \verb 10.1006/jvlc.1993.1015
+      \endverb
+    \endentry
+    \entry{Hundhausen2002MetaStudy}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=614ec727970b82a940859a5e202d052d}{%
+           family={Hundhausen},
+           familyi={H\bibinitperiod},
+           given={Christopher\bibnamedelima D.},
+           giveni={C\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=5c642ae8339f5d0707a365863927381a}{%
+           family={Douglas},
+           familyi={D\bibinitperiod},
+           given={Sarah\bibnamedelima A.},
+           giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=b9346be3e7951dd33c9e5bf95dae9243}{%
+           family={Stasko},
+           familyi={S\bibinitperiod},
+           given={John\bibnamedelima T.},
+           giveni={J\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+      }
+      \strng{namehash}{b59f1a06ce2ae6d1ae78efe4af352612}
+      \strng{fullhash}{f826d0c429681c349573e7c4fb0f4d8b}
+      \strng{fullhashraw}{f826d0c429681c349573e7c4fb0f4d8b}
+      \strng{bibnamehash}{f826d0c429681c349573e7c4fb0f4d8b}
+      \strng{authorbibnamehash}{f826d0c429681c349573e7c4fb0f4d8b}
+      \strng{authornamehash}{b59f1a06ce2ae6d1ae78efe4af352612}
+      \strng{authorfullhash}{f826d0c429681c349573e7c4fb0f4d8b}
+      \strng{authorfullhashraw}{f826d0c429681c349573e7c4fb0f4d8b}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Visual Languages and Computing}
+      \field{number}{3}
+      \field{title}{A Meta-Study of Algorithm Visualization Effectiveness}
+      \field{volume}{13}
+      \field{year}{2002}
+      \field{pages}{259\bibrangedash 290}
+      \range{pages}{32}
+      \verb{doi}
+      \verb 10.1006/jvlc.2002.0237
+      \endverb
+    \endentry
+    \entry{Naps2002Engagement}{inproceedings}{}{}
+      \name{author}{11}{}{%
+        {{hash=a525fd51653789a226a07a1f4601cc3b}{%
+           family={Naps},
+           familyi={N\bibinitperiod},
+           given={Thomas\bibnamedelima L.},
+           giveni={T\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=78b90e34e91dd3afa1b8ac76e4520154}{%
+           family={Roessling},
+           familyi={R\bibinitperiod},
+           given={Guido},
+           giveni={G\bibinitperiod}}}%
+        {{hash=1bf3dd1886f1e8dd33d6e78edbbebcb9}{%
+           family={Almstrum},
+           familyi={A\bibinitperiod},
+           given={Vicki},
+           giveni={V\bibinitperiod}}}%
+        {{hash=f96fe463e5ebf18ebe7b59fc2444d204}{%
+           family={Dann},
+           familyi={D\bibinitperiod},
+           given={Wanda},
+           giveni={W\bibinitperiod}}}%
+        {{hash=1ca2db8800b735f02b99ad991677525d}{%
+           family={Fleischer},
+           familyi={F\bibinitperiod},
+           given={Rudolf},
+           giveni={R\bibinitperiod}}}%
+        {{hash=54757e7e08ea9b812c963af4f9206caf}{%
+           family={Hundhausen},
+           familyi={H\bibinitperiod},
+           given={Christopher},
+           giveni={C\bibinitperiod}}}%
+        {{hash=ae7991fa0ce363ebb3e5ee618f4f4511}{%
+           family={Korhonen},
+           familyi={K\bibinitperiod},
+           given={Ari},
+           giveni={A\bibinitperiod}}}%
+        {{hash=e60ec24d6a9f8616c967c28a915f64c2}{%
+           family={Malmi},
+           familyi={M\bibinitperiod},
+           given={Lauri},
+           giveni={L\bibinitperiod}}}%
+        {{hash=965a0586b6ac64a83ff689329ae9d07e}{%
+           family={McNally},
+           familyi={M\bibinitperiod},
+           given={Myles},
+           giveni={M\bibinitperiod}}}%
+        {{hash=fdb768cefc2f47efba234725f42ae12a}{%
+           family={Rodger},
+           familyi={R\bibinitperiod},
+           given={Susan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=9e39094bf46cd14ea322425ddba8b424}{%
+           family={Velazquez-Iturbide},
+           familyi={V\bibinithyphendelim I\bibinitperiod},
+           given={J.\bibnamedelimi Angel},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{3b0ae7d20a0179fd08ad1ffa32ffe5f6}
+      \strng{fullhash}{4e911176d8a82ea1c0b4844b0f845793}
+      \strng{fullhashraw}{4e911176d8a82ea1c0b4844b0f845793}
+      \strng{bibnamehash}{3b0ae7d20a0179fd08ad1ffa32ffe5f6}
+      \strng{authorbibnamehash}{3b0ae7d20a0179fd08ad1ffa32ffe5f6}
+      \strng{authornamehash}{3b0ae7d20a0179fd08ad1ffa32ffe5f6}
+      \strng{authorfullhash}{4e911176d8a82ea1c0b4844b0f845793}
+      \strng{authorfullhashraw}{4e911176d8a82ea1c0b4844b0f845793}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the Working Group Reports from {ITiCSE} on Innovation and Technology in Computer Science Education}
+      \field{title}{Exploring the Role of Visualization and Engagement in Computer Science Education}
+      \field{year}{2002}
+      \field{pages}{131\bibrangedash 152}
+      \range{pages}{22}
+      \verb{doi}
+      \verb 10.1145/782941.782998
+      \endverb
+    \endentry
+    \entry{Sorva2013Review}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=f4cfe72a0e57692da14fe2e73f3a78b4}{%
+           family={Sorva},
+           familyi={S\bibinitperiod},
+           given={Juha},
+           giveni={J\bibinitperiod}}}%
+        {{hash=16edae3de69a32074dd9f649a61aca49}{%
+           family={Karavirta},
+           familyi={K\bibinitperiod},
+           given={Ville},
+           giveni={V\bibinitperiod}}}%
+        {{hash=e60ec24d6a9f8616c967c28a915f64c2}{%
+           family={Malmi},
+           familyi={M\bibinitperiod},
+           given={Lauri},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{ebbbb8ec2d2e409b484bbe20d44adc06}
+      \strng{fullhash}{abe484f65c2f571cfc6b721c254239c2}
+      \strng{fullhashraw}{abe484f65c2f571cfc6b721c254239c2}
+      \strng{bibnamehash}{abe484f65c2f571cfc6b721c254239c2}
+      \strng{authorbibnamehash}{abe484f65c2f571cfc6b721c254239c2}
+      \strng{authornamehash}{ebbbb8ec2d2e409b484bbe20d44adc06}
+      \strng{authorfullhash}{abe484f65c2f571cfc6b721c254239c2}
+      \strng{authorfullhashraw}{abe484f65c2f571cfc6b721c254239c2}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{{ACM} Transactions on Computing Education}
+      \field{number}{4}
+      \field{title}{A Review of Generic Program Visualization Systems for Introductory Programming Education}
+      \field{volume}{13}
+      \field{year}{2013}
+      \field{pages}{1\bibrangedash 64}
+      \range{pages}{64}
+      \verb{doi}
+      \verb 10.1145/2490822
+      \endverb
+    \endentry
+    \entry{EducationalTechnologyResearch}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=cf2ed991954beb5872de6e2354bfc59b}{%
+           family={Kogan},
+           familyi={K\bibinitperiod},
+           given={Genady},
+           giveni={G\bibinitperiod}}}%
+        {{hash=789ab67d0ba2c1f2931b64d4d58dd78a}{%
+           family={Chassidim},
+           familyi={C\bibinitperiod},
+           given={Hadas},
+           giveni={H\bibinitperiod}}}%
+        {{hash=7f70efa8ec693b5fecb832c946399e3c}{%
+           family={Rabaev},
+           familyi={R\bibinitperiod},
+           given={Irina},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{1c417599d21ac0f030e5ff78d87e582d}
+      \strng{fullhash}{7dbaa3195654b7d3541eec23e9c693c4}
+      \strng{fullhashraw}{7dbaa3195654b7d3541eec23e9c693c4}
+      \strng{bibnamehash}{7dbaa3195654b7d3541eec23e9c693c4}
+      \strng{authorbibnamehash}{7dbaa3195654b7d3541eec23e9c693c4}
+      \strng{authornamehash}{1c417599d21ac0f030e5ff78d87e582d}
+      \strng{authorfullhash}{7dbaa3195654b7d3541eec23e9c693c4}
+      \strng{authorfullhashraw}{7dbaa3195654b7d3541eec23e9c693c4}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Educational Technology Research and Development}
+      \field{number}{4}
+      \field{title}{The Efficacy of Animation and Visualization in Teaching Data Structures: A Case Study}
+      \field{volume}{72}
+      \field{year}{2024}
+      \field{pages}{2349\bibrangedash 2372}
+      \range{pages}{24}
+      \verb{doi}
+      \verb 10.1007/s11423-024-10382-w
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/s11423-024-10382-w
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/s11423-024-10382-w
+      \endverb
+    \endentry
+    \entry{Jeliot3}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=b5ca96d9d5b35ca7c8730571c2a4eb20}{%
+           family={Moreno},
+           familyi={M\bibinitperiod},
+           given={Andres},
+           giveni={A\bibinitperiod}}}%
+        {{hash=50ef117d3876d028ce628d973b267f00}{%
+           family={Myller},
+           familyi={M\bibinitperiod},
+           given={Niko},
+           giveni={N\bibinitperiod}}}%
+        {{hash=33a389762ec7ac24fe1b95e1abf02f9a}{%
+           family={Sutinen},
+           familyi={S\bibinitperiod},
+           given={Erkki},
+           giveni={E\bibinitperiod}}}%
+        {{hash=fb7fd3e44cd1357335603d69aefb2097}{%
+           family={Ben-Ari},
+           familyi={B\bibinithyphendelim A\bibinitperiod},
+           given={Mordechai},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{1c7ecf167abc58c67917895b9c928275}
+      \strng{fullhash}{24d077b0e372203efcbebe5414474441}
+      \strng{fullhashraw}{24d077b0e372203efcbebe5414474441}
+      \strng{bibnamehash}{24d077b0e372203efcbebe5414474441}
+      \strng{authorbibnamehash}{24d077b0e372203efcbebe5414474441}
+      \strng{authornamehash}{1c7ecf167abc58c67917895b9c928275}
+      \strng{authorfullhash}{24d077b0e372203efcbebe5414474441}
+      \strng{authorfullhashraw}{24d077b0e372203efcbebe5414474441}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the Working Conference on Advanced Visual Interfaces}
+      \field{title}{Visualizing Programs with {Jeliot} 3}
+      \field{year}{2004}
+      \field{pages}{373\bibrangedash 376}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1145/989863.989928
+      \endverb
+    \endentry
+    \entry{VisAST}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{hash=46e36ff698d34d2ce32d4928a5e58103}{%
+           family={Aalvik},
+           familyi={A\bibinitperiod},
+           given={Ragnhild},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {University of Bergen}%
+      }
+      \strng{namehash}{46e36ff698d34d2ce32d4928a5e58103}
+      \strng{fullhash}{46e36ff698d34d2ce32d4928a5e58103}
+      \strng{fullhashraw}{46e36ff698d34d2ce32d4928a5e58103}
+      \strng{bibnamehash}{46e36ff698d34d2ce32d4928a5e58103}
+      \strng{authorbibnamehash}{46e36ff698d34d2ce32d4928a5e58103}
+      \strng{authornamehash}{46e36ff698d34d2ce32d4928a5e58103}
+      \strng{authorfullhash}{46e36ff698d34d2ce32d4928a5e58103}
+      \strng{authorfullhashraw}{46e36ff698d34d2ce32d4928a5e58103}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: June 19, 2026}
+      \field{title}{{visAST}: Generic {AST} Visualiser for Software Language Education}
+      \field{type}{mathesis}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://hdl.handle.net/1956/19781
+      \endverb
+      \verb{url}
+      \verb https://hdl.handle.net/1956/19781
+      \endverb
+    \endentry
+    \entry{Abounegm2024Stella}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=48c1a0379ac90dd155bb796edca18a18}{%
+           family={Abounegm},
+           familyi={A\bibinitperiod},
+           given={Abdelrahman},
+           giveni={A\bibinitperiod}}}%
+        {{hash=bcf69e40c1cad9945d330ad143e3366c}{%
+           family={Kudasov},
+           familyi={K\bibinitperiod},
+           given={Nikolai},
+           giveni={N\bibinitperiod}}}%
+        {{hash=d07fac13049b531c98c20594c46d18a8}{%
+           family={Stepanov},
+           familyi={S\bibinitperiod},
+           given={Alexey},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{1863a642b4cc5f83dd3b2a692a55b0ef}
+      \strng{fullhash}{19e652d31c78901f655fa543fa2a5cb0}
+      \strng{fullhashraw}{19e652d31c78901f655fa543fa2a5cb0}
+      \strng{bibnamehash}{19e652d31c78901f655fa543fa2a5cb0}
+      \strng{authorbibnamehash}{19e652d31c78901f655fa543fa2a5cb0}
+      \strng{authornamehash}{1863a642b4cc5f83dd3b2a692a55b0ef}
+      \strng{authorfullhash}{19e652d31c78901f655fa543fa2a5cb0}
+      \strng{authorfullhashraw}{19e652d31c78901f655fa543fa2a5cb0}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.PL}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{Electronic Proceedings in Theoretical Computer Science}
+      \field{note}{Accessed: June 19, 2026}
+      \field{title}{Teaching Type Systems Implementation with {STELLA}, an Extensible Statically Typed Programming Language}
+      \field{year}{2024}
+      \verb{eprint}
+      \verb 2407.08089
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2407.08089
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2407.08089
+      \endverb
+    \endentry
+    \entry{Brooke1996SUS}{incollection}{}{}
+      \name{author}{1}{}{%
+        {{hash=813064283275c281401d7a7483420c67}{%
+           family={Brooke},
+           familyi={B\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+      }
+      \name{editor}{4}{}{%
+        {{hash=f4dd6dd0057b9630f3f5689c42ce3347}{%
+           family={Jordan},
+           familyi={J\bibinitperiod},
+           given={Patrick\bibnamedelima W.},
+           giveni={P\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=d72440e8326b04d0098a1a8e6ccab8bd}{%
+           family={Thomas},
+           familyi={T\bibinitperiod},
+           given={Bruce},
+           giveni={B\bibinitperiod}}}%
+        {{hash=8b8a10905f0d3cfa60d8b1742260677d}{%
+           family={McClelland},
+           familyi={M\bibinitperiod},
+           given={Ian\bibnamedelima L.},
+           giveni={I\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=53a489c557b52c80bdfe5964b39ea821}{%
+           family={Weerdmeester},
+           familyi={W\bibinitperiod},
+           given={Bernard},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {London}%
+      }
+      \list{publisher}{1}{%
+        {Taylor \& Francis}%
+      }
+      \strng{namehash}{813064283275c281401d7a7483420c67}
+      \strng{fullhash}{813064283275c281401d7a7483420c67}
+      \strng{fullhashraw}{813064283275c281401d7a7483420c67}
+      \strng{bibnamehash}{813064283275c281401d7a7483420c67}
+      \strng{authorbibnamehash}{813064283275c281401d7a7483420c67}
+      \strng{authornamehash}{813064283275c281401d7a7483420c67}
+      \strng{authorfullhash}{813064283275c281401d7a7483420c67}
+      \strng{authorfullhashraw}{813064283275c281401d7a7483420c67}
+      \strng{editorbibnamehash}{e197d41591a21bcd5e67a9b4c5c12e54}
+      \strng{editornamehash}{161df31cfda2ca59b22c7e189ab9aca4}
+      \strng{editorfullhash}{e197d41591a21bcd5e67a9b4c5c12e54}
+      \strng{editorfullhashraw}{e197d41591a21bcd5e67a9b4c5c12e54}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Usability Evaluation in Industry}
+      \field{title}{{SUS}: A Quick and Dirty Usability Scale}
+      \field{year}{1996}
+      \field{pages}{189\bibrangedash 194}
+      \range{pages}{6}
+    \endentry
+    \entry{Bangor2009SUS}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=05ed7926f59ed51998e7d806c8a2ca30}{%
+           family={Bangor},
+           familyi={B\bibinitperiod},
+           given={Aaron},
+           giveni={A\bibinitperiod}}}%
+        {{hash=221e957dde9bcf783fdee858cf2b365e}{%
+           family={Kortum},
+           familyi={K\bibinitperiod},
+           given={Philip},
+           giveni={P\bibinitperiod}}}%
+        {{hash=bff0e87eeab4ba1e74ae3e776e15d490}{%
+           family={Miller},
+           familyi={M\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{016daf70c51e6b1558f266b3057c8426}
+      \strng{fullhash}{069c4734e30da9449cee720f93eda80e}
+      \strng{fullhashraw}{069c4734e30da9449cee720f93eda80e}
+      \strng{bibnamehash}{069c4734e30da9449cee720f93eda80e}
+      \strng{authorbibnamehash}{069c4734e30da9449cee720f93eda80e}
+      \strng{authornamehash}{016daf70c51e6b1558f266b3057c8426}
+      \strng{authorfullhash}{069c4734e30da9449cee720f93eda80e}
+      \strng{authorfullhashraw}{069c4734e30da9449cee720f93eda80e}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Usability Studies}
+      \field{number}{3}
+      \field{title}{Determining What Individual {SUS} Scores Mean: Adding an Adjective Rating Scale}
+      \field{volume}{4}
+      \field{year}{2009}
+      \field{pages}{114\bibrangedash 123}
+      \range{pages}{10}
+      \verb{urlraw}
+      \verb https://uxpajournal.org/determining-what-individual-sus-scores-mean-adding-an-adjective-rating-scale/
+      \endverb
+      \verb{url}
+      \verb https://uxpajournal.org/determining-what-individual-sus-scores-mean-adding-an-adjective-rating-scale/
+      \endverb
+    \endentry
+    \entry{ISO924111}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=7058e4bd76f877c52b621c942b30613c}{%
+           family={{International Organization for Standardization}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{fullhash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{fullhashraw}{7058e4bd76f877c52b621c942b30613c}
+      \strng{bibnamehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authorbibnamehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authornamehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authorfullhash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authorfullhashraw}{7058e4bd76f877c52b621c942b30613c}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.iso.org/standard/63500.html}}
+      \field{title}{{ISO} 9241-11:2018 Ergonomics of Human-System Interaction -- Part 11: Usability: Definitions and Concepts}
+      \field{year}{2018}
+    \endentry
+    \entry{Sorva2013NotionalMachines}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=f4cfe72a0e57692da14fe2e73f3a78b4}{%
+           family={Sorva},
+           familyi={S\bibinitperiod},
+           given={Juha},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{f4cfe72a0e57692da14fe2e73f3a78b4}
+      \strng{fullhash}{f4cfe72a0e57692da14fe2e73f3a78b4}
+      \strng{fullhashraw}{f4cfe72a0e57692da14fe2e73f3a78b4}
+      \strng{bibnamehash}{f4cfe72a0e57692da14fe2e73f3a78b4}
+      \strng{authorbibnamehash}{f4cfe72a0e57692da14fe2e73f3a78b4}
+      \strng{authornamehash}{f4cfe72a0e57692da14fe2e73f3a78b4}
+      \strng{authorfullhash}{f4cfe72a0e57692da14fe2e73f3a78b4}
+      \strng{authorfullhashraw}{f4cfe72a0e57692da14fe2e73f3a78b4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{{ACM} Transactions on Computing Education}
+      \field{number}{2}
+      \field{title}{Notional Machines and Introductory Programming Education}
+      \field{volume}{13}
+      \field{year}{2013}
+      \field{pages}{1\bibrangedash 31}
+      \range{pages}{31}
+      \verb{doi}
+      \verb 10.1145/2483710.2483713
+      \endverb
+    \endentry
+    \entry{Storey2005ProgramComprehension}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=b4294f38947dd1fb3f84c3b19821fba5}{%
+           family={Storey},
+           familyi={S\bibinitperiod},
+           given={Margaret-Anne\bibnamedelima D.},
+           giveni={M\bibinithyphendelim A\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{b4294f38947dd1fb3f84c3b19821fba5}
+      \strng{fullhash}{b4294f38947dd1fb3f84c3b19821fba5}
+      \strng{fullhashraw}{b4294f38947dd1fb3f84c3b19821fba5}
+      \strng{bibnamehash}{b4294f38947dd1fb3f84c3b19821fba5}
+      \strng{authorbibnamehash}{b4294f38947dd1fb3f84c3b19821fba5}
+      \strng{authornamehash}{b4294f38947dd1fb3f84c3b19821fba5}
+      \strng{authorfullhash}{b4294f38947dd1fb3f84c3b19821fba5}
+      \strng{authorfullhashraw}{b4294f38947dd1fb3f84c3b19821fba5}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Software Quality Journal}
+      \field{number}{3}
+      \field{title}{Theories, Tools and Research Methods in Program Comprehension: Past, Present and Future}
+      \field{volume}{14}
+      \field{year}{2006}
+      \field{pages}{187\bibrangedash 208}
+      \range{pages}{22}
+      \verb{doi}
+      \verb 10.1007/s11219-006-9216-4
+      \endverb
+    \endentry
+    \entry{StellaLanguageDocumentation}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=bcf69e40c1cad9945d330ad143e3366c}{%
+           family={Kudasov},
+           familyi={K\bibinitperiod},
+           given={Nikolai},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{bcf69e40c1cad9945d330ad143e3366c}
+      \strng{fullhash}{bcf69e40c1cad9945d330ad143e3366c}
+      \strng{fullhashraw}{bcf69e40c1cad9945d330ad143e3366c}
+      \strng{bibnamehash}{bcf69e40c1cad9945d330ad143e3366c}
+      \strng{authorbibnamehash}{bcf69e40c1cad9945d330ad143e3366c}
+      \strng{authornamehash}{bcf69e40c1cad9945d330ad143e3366c}
+      \strng{authorfullhash}{bcf69e40c1cad9945d330ad143e3366c}
+      \strng{authorfullhashraw}{bcf69e40c1cad9945d330ad143e3366c}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://fizruk.github.io/stella/site/core/introduction/}}
+      \field{note}{Accessed: June 19, 2026}
+      \field{title}{Stella Language Documentation}
+      \field{year}{2024}
+    \endentry
+    \entry{NielsonProgramAnalysis}{book}{}{}
+      \name{author}{3}{}{%
+        {{hash=a4a1d0b12b1b99c1c382e8addbc40e96}{%
+           family={Nielson},
+           familyi={N\bibinitperiod},
+           given={Flemming},
+           giveni={F\bibinitperiod}}}%
+        {{hash=075c69b09ea8304cfd64e8421c6c3c71}{%
+           family={Nielson},
+           familyi={N\bibinitperiod},
+           given={Hanne\bibnamedelima Riis},
+           giveni={H\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=07d9480ad086f8ed8bbaaf0f5165bb57}{%
+           family={Hankin},
+           familyi={H\bibinitperiod},
+           given={Chris},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{7db931100b848f95b515fb14b93ec11c}
+      \strng{fullhash}{5403133b44f441e9b8e2c257765a8baa}
+      \strng{fullhashraw}{5403133b44f441e9b8e2c257765a8baa}
+      \strng{bibnamehash}{5403133b44f441e9b8e2c257765a8baa}
+      \strng{authorbibnamehash}{5403133b44f441e9b8e2c257765a8baa}
+      \strng{authornamehash}{7db931100b848f95b515fb14b93ec11c}
+      \strng{authorfullhash}{5403133b44f441e9b8e2c257765a8baa}
+      \strng{authorfullhashraw}{5403133b44f441e9b8e2c257765a8baa}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Principles of Program Analysis}
+      \field{year}{1999}
+      \verb{doi}
+      \verb 10.1007/978-3-662-03811-6
+      \endverb
+    \endentry
+    \entry{MicrosoftLSP}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=140864078aeca1c7c35b4beb33c53c34}{%
+           family={{Microsoft}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{fullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{fullhashraw}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{bibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorbibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authornamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorfullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorfullhashraw}{140864078aeca1c7c35b4beb33c53c34}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/}}
+      \field{note}{Accessed: June 19, 2026}
+      \field{title}{Language Server Protocol Specification 3.17}
+      \field{year}{2024}
+    \endentry
+    \entry{JSONRPC20}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=51d40c3ba48b0cca212ff0d6bc064d82}{%
+           family={{JSON-RPC Working Group}},
+           familyi={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{51d40c3ba48b0cca212ff0d6bc064d82}
+      \strng{fullhash}{51d40c3ba48b0cca212ff0d6bc064d82}
+      \strng{fullhashraw}{51d40c3ba48b0cca212ff0d6bc064d82}
+      \strng{bibnamehash}{51d40c3ba48b0cca212ff0d6bc064d82}
+      \strng{authorbibnamehash}{51d40c3ba48b0cca212ff0d6bc064d82}
+      \strng{authornamehash}{51d40c3ba48b0cca212ff0d6bc064d82}
+      \strng{authorfullhash}{51d40c3ba48b0cca212ff0d6bc064d82}
+      \strng{authorfullhashraw}{51d40c3ba48b0cca212ff0d6bc064d82}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.jsonrpc.org/specification}}
+      \field{note}{Accessed: June 19, 2026}
+      \field{title}{{JSON-RPC} 2.0 Specification}
+      \field{year}{2013}
+    \endentry
+    \entry{MicrosoftVS}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=140864078aeca1c7c35b4beb33c53c34}{%
+           family={{Microsoft}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{fullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{fullhashraw}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{bibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorbibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authornamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorfullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorfullhashraw}{140864078aeca1c7c35b4beb33c53c34}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://code.visualstudio.com/api}}
+      \field{note}{Accessed: June 19, 2026}
+      \field{title}{Visual Studio Code Extension API}
+      \field{year}{2026}
+    \endentry
+    \entry{VSCodeTreeView}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=140864078aeca1c7c35b4beb33c53c34}{%
+           family={{Microsoft}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{fullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{fullhashraw}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{bibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorbibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authornamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorfullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorfullhashraw}{140864078aeca1c7c35b4beb33c53c34}
+      \field{extraname}{3}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://code.visualstudio.com/api/extension-guides/tree-view}}
+      \field{note}{Accessed: June 19, 2026}
+      \field{title}{Visual Studio Code Extension API: Tree View}
+      \field{year}{2026}
+    \endentry
+    \entry{VSCodeWebview}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=140864078aeca1c7c35b4beb33c53c34}{%
+           family={{Microsoft}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{fullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{fullhashraw}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{bibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorbibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authornamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorfullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorfullhashraw}{140864078aeca1c7c35b4beb33c53c34}
+      \field{extraname}{4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://code.visualstudio.com/api/extension-guides/webview}}
+      \field{note}{Accessed: June 19, 2026}
+      \field{title}{Visual Studio Code Extension API: Webview}
+      \field{year}{2026}
+    \endentry
+    \entry{GreenPetre1996}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=fc6c7cb9a66734adc09db592aafd2220}{%
+           family={Green},
+           familyi={G\bibinitperiod},
+           given={Thomas\bibnamedelimb R.\bibnamedelimi G.},
+           giveni={T\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=4f0e5169c48e02fa91be6f820f2eccb9}{%
+           family={Petre},
+           familyi={P\bibinitperiod},
+           given={Marian},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{50424bea447b1f5708922c8f0e3051e7}
+      \strng{fullhash}{50424bea447b1f5708922c8f0e3051e7}
+      \strng{fullhashraw}{50424bea447b1f5708922c8f0e3051e7}
+      \strng{bibnamehash}{50424bea447b1f5708922c8f0e3051e7}
+      \strng{authorbibnamehash}{50424bea447b1f5708922c8f0e3051e7}
+      \strng{authornamehash}{50424bea447b1f5708922c8f0e3051e7}
+      \strng{authorfullhash}{50424bea447b1f5708922c8f0e3051e7}
+      \strng{authorfullhashraw}{50424bea447b1f5708922c8f0e3051e7}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Visual Languages and Computing}
+      \field{number}{2}
+      \field{title}{Usability Analysis of Visual Programming Environments: A Cognitive Dimensions Framework}
+      \field{volume}{7}
+      \field{year}{1996}
+      \field{pages}{131\bibrangedash 174}
+      \range{pages}{44}
+      \verb{doi}
+      \verb 10.1006/jvlc.1996.0009
+      \endverb
+    \endentry
+    \entry{WareInfoVis}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=ddfcf636fe0f65b7e7300d5a22336e7c}{%
+           family={Ware},
+           familyi={W\bibinitperiod},
+           given={Colin},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Morgan Kaufmann}%
+      }
+      \strng{namehash}{ddfcf636fe0f65b7e7300d5a22336e7c}
+      \strng{fullhash}{ddfcf636fe0f65b7e7300d5a22336e7c}
+      \strng{fullhashraw}{ddfcf636fe0f65b7e7300d5a22336e7c}
+      \strng{bibnamehash}{ddfcf636fe0f65b7e7300d5a22336e7c}
+      \strng{authorbibnamehash}{ddfcf636fe0f65b7e7300d5a22336e7c}
+      \strng{authornamehash}{ddfcf636fe0f65b7e7300d5a22336e7c}
+      \strng{authorfullhash}{ddfcf636fe0f65b7e7300d5a22336e7c}
+      \strng{authorfullhashraw}{ddfcf636fe0f65b7e7300d5a22336e7c}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{4}
+      \field{isbn}{978-0-12-812875-6}
+      \field{title}{Information Visualization: Perception for Design}
+      \field{year}{2021}
+    \endentry
+    \entry{Ferrante1987PDG}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=a825af87e6c4e5560a8dad0db67120a9}{%
+           family={Ferrante},
+           familyi={F\bibinitperiod},
+           given={Jeanne},
+           giveni={J\bibinitperiod}}}%
+        {{hash=1536fa9678511d4c822228c5ad2d5925}{%
+           family={Ottenstein},
+           familyi={O\bibinitperiod},
+           given={Karl\bibnamedelima J.},
+           giveni={K\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=16e17e65fac1a585ba39477b32f899d5}{%
+           family={Warren},
+           familyi={W\bibinitperiod},
+           given={Joe\bibnamedelima D.},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{c50f614593dfca501b6d342c4570df83}
+      \strng{fullhash}{d8c01e914dbb1fbdf266201315818b90}
+      \strng{fullhashraw}{d8c01e914dbb1fbdf266201315818b90}
+      \strng{bibnamehash}{d8c01e914dbb1fbdf266201315818b90}
+      \strng{authorbibnamehash}{d8c01e914dbb1fbdf266201315818b90}
+      \strng{authornamehash}{c50f614593dfca501b6d342c4570df83}
+      \strng{authorfullhash}{d8c01e914dbb1fbdf266201315818b90}
+      \strng{authorfullhashraw}{d8c01e914dbb1fbdf266201315818b90}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{{ACM} Transactions on Programming Languages and Systems}
+      \field{number}{3}
+      \field{title}{The Program Dependence Graph and Its Use in Optimization}
+      \field{volume}{9}
+      \field{year}{1987}
+      \field{pages}{319\bibrangedash 349}
+      \range{pages}{31}
+      \verb{doi}
+      \verb 10.1145/24039.24041
+      \endverb
+    \endentry
+    \entry{Weiser1981Slicing}{inproceedings}{}{}
+      \name{author}{1}{}{%
+        {{hash=9a4cd1345f5dc5a1be20fa1032d65d9f}{%
+           family={Weiser},
+           familyi={W\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{9a4cd1345f5dc5a1be20fa1032d65d9f}
+      \strng{fullhash}{9a4cd1345f5dc5a1be20fa1032d65d9f}
+      \strng{fullhashraw}{9a4cd1345f5dc5a1be20fa1032d65d9f}
+      \strng{bibnamehash}{9a4cd1345f5dc5a1be20fa1032d65d9f}
+      \strng{authorbibnamehash}{9a4cd1345f5dc5a1be20fa1032d65d9f}
+      \strng{authornamehash}{9a4cd1345f5dc5a1be20fa1032d65d9f}
+      \strng{authorfullhash}{9a4cd1345f5dc5a1be20fa1032d65d9f}
+      \strng{authorfullhashraw}{9a4cd1345f5dc5a1be20fa1032d65d9f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 5th International Conference on Software Engineering}
+      \field{title}{Program Slicing}
+      \field{year}{1981}
+      \field{pages}{439\bibrangedash 449}
+      \range{pages}{11}
+    \endentry
+    \entry{Horwitz1990Slicing}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=98c02a706d5ea56177dee6e3a5eb68bc}{%
+           family={Horwitz},
+           familyi={H\bibinitperiod},
+           given={Susan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=6f36e6e7adcf648730340faa1a264a24}{%
+           family={Reps},
+           familyi={R\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=6f84944b7ab9eb162b426941ee61bbdb}{%
+           family={Binkley},
+           familyi={B\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{3160eed2ca881bba617edb6f7cac6276}
+      \strng{fullhash}{89416ee366f28675b7f910e81ef8f38f}
+      \strng{fullhashraw}{89416ee366f28675b7f910e81ef8f38f}
+      \strng{bibnamehash}{89416ee366f28675b7f910e81ef8f38f}
+      \strng{authorbibnamehash}{89416ee366f28675b7f910e81ef8f38f}
+      \strng{authornamehash}{3160eed2ca881bba617edb6f7cac6276}
+      \strng{authorfullhash}{89416ee366f28675b7f910e81ef8f38f}
+      \strng{authorfullhashraw}{89416ee366f28675b7f910e81ef8f38f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{{ACM} Transactions on Programming Languages and Systems}
+      \field{number}{1}
+      \field{title}{Interprocedural Slicing Using Dependence Graphs}
+      \field{volume}{12}
+      \field{year}{1990}
+      \field{pages}{26\bibrangedash 60}
+      \range{pages}{35}
+      \verb{doi}
+      \verb 10.1145/77606.77608
+      \endverb
+    \endentry
+    \entry{Wohlin2012Experimentation}{book}{}{}
+      \name{author}{6}{}{%
+        {{hash=e1ce15e2eeb53e3fc8c6035fd761594b}{%
+           family={Wohlin},
+           familyi={W\bibinitperiod},
+           given={Claes},
+           giveni={C\bibinitperiod}}}%
+        {{hash=306f73791e107dd9b83d45ee22e6b523}{%
+           family={Runeson},
+           familyi={R\bibinitperiod},
+           given={Per},
+           giveni={P\bibinitperiod}}}%
+        {{hash=b2daf6a5a7fa7b856597b79ec736a53c}{%
+           family={Hoest},
+           familyi={H\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=5dad21e576e61668b8797b95088d02dd}{%
+           family={Ohlsson},
+           familyi={O\bibinitperiod},
+           given={Magnus\bibnamedelima C.},
+           giveni={M\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=27ecb27706f9b8ce77cc3ae3aacfb95c}{%
+           family={Regnell},
+           familyi={R\bibinitperiod},
+           given={Bjoern},
+           giveni={B\bibinitperiod}}}%
+        {{hash=8aea07246d02e044abe6fbe32c25eae8}{%
+           family={Wesslen},
+           familyi={W\bibinitperiod},
+           given={Anders},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{55ccf4d2f8f1d35fa125fcc569510989}
+      \strng{fullhash}{95b7cc7e369be9f655ecb9ba062d9c36}
+      \strng{fullhashraw}{95b7cc7e369be9f655ecb9ba062d9c36}
+      \strng{bibnamehash}{95b7cc7e369be9f655ecb9ba062d9c36}
+      \strng{authorbibnamehash}{95b7cc7e369be9f655ecb9ba062d9c36}
+      \strng{authornamehash}{55ccf4d2f8f1d35fa125fcc569510989}
+      \strng{authorfullhash}{95b7cc7e369be9f655ecb9ba062d9c36}
+      \strng{authorfullhashraw}{95b7cc7e369be9f655ecb9ba062d9c36}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Experimentation in Software Engineering}
+      \field{year}{2012}
+      \verb{doi}
+      \verb 10.1007/978-3-642-29044-2
+      \endverb
+    \endentry
+    \entry{RunesonHost2009}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=306f73791e107dd9b83d45ee22e6b523}{%
+           family={Runeson},
+           familyi={R\bibinitperiod},
+           given={Per},
+           giveni={P\bibinitperiod}}}%
+        {{hash=b2daf6a5a7fa7b856597b79ec736a53c}{%
+           family={Hoest},
+           familyi={H\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{d8c02cd9d47a1eebcedb78f522b9cfc2}
+      \strng{fullhash}{d8c02cd9d47a1eebcedb78f522b9cfc2}
+      \strng{fullhashraw}{d8c02cd9d47a1eebcedb78f522b9cfc2}
+      \strng{bibnamehash}{d8c02cd9d47a1eebcedb78f522b9cfc2}
+      \strng{authorbibnamehash}{d8c02cd9d47a1eebcedb78f522b9cfc2}
+      \strng{authornamehash}{d8c02cd9d47a1eebcedb78f522b9cfc2}
+      \strng{authorfullhash}{d8c02cd9d47a1eebcedb78f522b9cfc2}
+      \strng{authorfullhashraw}{d8c02cd9d47a1eebcedb78f522b9cfc2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Empirical Software Engineering}
+      \field{number}{2}
+      \field{title}{Guidelines for Conducting and Reporting Case Study Research in Software Engineering}
+      \field{volume}{14}
+      \field{year}{2009}
+      \field{pages}{131\bibrangedash 164}
+      \range{pages}{34}
+      \verb{doi}
+      \verb 10.1007/s10664-008-9102-8
+      \endverb
+    \endentry
+    \entry{TypeScriptHandbook}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=140864078aeca1c7c35b4beb33c53c34}{%
+           family={{Microsoft}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{fullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{fullhashraw}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{bibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorbibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authornamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorfullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorfullhashraw}{140864078aeca1c7c35b4beb33c53c34}
+      \field{extraname}{5}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.typescriptlang.org/docs/handbook/intro.html}}
+      \field{note}{Accessed: June 19, 2026}
+      \field{title}{The {TypeScript} Handbook}
+      \field{year}{2026}
+    \endentry
+    \entry{LangiumDocs}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=3af390ed3da1623ac82b5a1bf48ebd1f}{%
+           family={{TypeFox}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{3af390ed3da1623ac82b5a1bf48ebd1f}
+      \strng{fullhash}{3af390ed3da1623ac82b5a1bf48ebd1f}
+      \strng{fullhashraw}{3af390ed3da1623ac82b5a1bf48ebd1f}
+      \strng{bibnamehash}{3af390ed3da1623ac82b5a1bf48ebd1f}
+      \strng{authorbibnamehash}{3af390ed3da1623ac82b5a1bf48ebd1f}
+      \strng{authornamehash}{3af390ed3da1623ac82b5a1bf48ebd1f}
+      \strng{authorfullhash}{3af390ed3da1623ac82b5a1bf48ebd1f}
+      \strng{authorfullhashraw}{3af390ed3da1623ac82b5a1bf48ebd1f}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://langium.org/docs/}}
+      \field{note}{Accessed: June 19, 2026}
+      \field{title}{Langium Documentation}
+      \field{year}{2026}
+    \endentry
+    \entry{Typir}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=3af390ed3da1623ac82b5a1bf48ebd1f}{%
+           family={{TypeFox}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{3af390ed3da1623ac82b5a1bf48ebd1f}
+      \strng{fullhash}{3af390ed3da1623ac82b5a1bf48ebd1f}
+      \strng{fullhashraw}{3af390ed3da1623ac82b5a1bf48ebd1f}
+      \strng{bibnamehash}{3af390ed3da1623ac82b5a1bf48ebd1f}
+      \strng{authorbibnamehash}{3af390ed3da1623ac82b5a1bf48ebd1f}
+      \strng{authornamehash}{3af390ed3da1623ac82b5a1bf48ebd1f}
+      \strng{authorfullhash}{3af390ed3da1623ac82b5a1bf48ebd1f}
+      \strng{authorfullhashraw}{3af390ed3da1623ac82b5a1bf48ebd1f}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://github.com/typefox/typir}}
+      \field{note}{Accessed: June 19, 2026}
+      \field{title}{{Typir}: Type Systems for Language Engineering}
+      \field{year}{2026}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

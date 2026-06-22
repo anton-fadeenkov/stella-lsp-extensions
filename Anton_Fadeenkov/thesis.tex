@@ -1,0 +1,179 @@
+﻿\documentclass[oneside,final,14pt,a4paper]{extreport}
+
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage{tempora}
+  \usepackage[T1,T2A]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \DeclareFontShape{OT1}{cmtt}{bx}{n}
+    {<5><6><7><8><9><10><10.95><12><14.4><17.28><20.74><24.88>cmttb10}{}
+  \renewcommand{\ttdefault}{pcr}
+\else
+  \usepackage{fontspec}
+  \setmainfont{Times New Roman}
+  \setsansfont{Arial}
+  \setmonofont{Courier New}[Scale=MatchLowercase]
+\fi
+
+\usepackage[
+  a4paper,
+  left=25mm,
+  right=20mm,
+  top=20mm,
+  bottom=20mm,
+  headheight=17pt,
+  headsep=7mm,
+  footskip=10mm
+]{geometry}
+
+\usepackage{setspace}
+\setstretch{1.5}
+\setlength{\emergencystretch}{2em}
+\usepackage{indentfirst}
+\setlength{\parindent}{1.25cm}
+
+\usepackage[english]{babel}
+
+\usepackage{amsmath,amsfonts}
+\usepackage{graphicx}
+\graphicspath{{figs/}}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{enumitem}
+\usepackage{csquotes}
+\usepackage{url}
+\usepackage{xurl}
+\usepackage{xcolor}
+
+\usepackage[
+  backend=biber,
+  style=ieee,
+  autocite=inline
+]{biblatex}
+\addbibresource{ref.bib}
+\DefineBibliographyStrings{english}{bibliography={References}}
+\AtBeginBibliography{\sloppy}
+
+\usepackage[
+  labelfont=normalfont
+]{caption}
+\captionsetup[table]{name={Table},labelsep=period,justification=centering,singlelinecheck=false}
+\captionsetup[figure]{name={Figure},labelsep=period,justification=raggedright,singlelinecheck=false}
+
+\usepackage{fancyhdr}
+\setlength{\headheight}{17pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\nouppercase{\leftmark}}
+\fancyhead[R]{\thepage}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter\ -- #1}{}}
+
+\usepackage[
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=black,
+  urlcolor=black
+]{hyperref}
+
+\begin{document}
+
+\begingroup
+\setstretch{1.0}
+\thispagestyle{empty}
+\begin{center}
+\textbf{Автономная некоммерческая организация высшего образования}\\
+\textbf{<<Университет Иннополис>>}
+
+\vspace{0.45cm}
+
+\textbf{\MakeUppercase{Выпускная квалификационная работа}}\\
+\textbf{(бакалаврская работа)}\\
+\textbf{по направлению подготовки}\\
+\textbf{09.03.01 --- <<Информатика и вычислительная техника>>}
+
+\vspace{0.45cm}
+
+\textbf{\MakeUppercase{Graduation Thesis}}\\
+\textbf{(Bachelor's Graduation Thesis)}\\
+\textbf{Field of Study}\\
+\textbf{09.03.01 --- <<Computer Science>>}
+
+\vspace{0.45cm}
+
+\textbf{Направленность (профиль) образовательной программы}\\
+\textbf{<<Информатика и вычислительная техника>>}\\
+\textbf{Area of Specialization / Academic Program Title:}\\
+\textbf{<<Computer Science>>}
+\end{center}
+
+\vspace{0.45cm}
+
+\noindent
+\begin{tabular}{@{}p{2.7cm}p{12.6cm}@{}}
+\textbf{Тема /}\\
+\textbf{Topic}
+&
+\fbox{\begin{minipage}[c][2.6cm][c]{12.2cm}
+\textbf{Visual Studio Code Extension for Type-Based Visualization for the Stella Programming Language / Расширение Visual Studio Code для визуализации информации на основе типов для языка программирования Stella}
+\end{minipage}}
+\end{tabular}
+
+\vspace{0.45cm}
+
+\noindent
+\begin{tabular}{@{}p{4.2cm}p{5.5cm}p{4.1cm}@{}}
+Работу выполнил /\\
+Thesis is executed by
+&
+\fbox{\begin{minipage}[c][1.9cm][c]{5.1cm}
+\textbf{Фадеенков Антон Олегович / Fadeenkov Anton Olegovich}
+\end{minipage}}
+&
+\fbox{\begin{minipage}[c][1.9cm][c]{3.7cm}
+\centering \vfill подпись / signature
+\end{minipage}}
+\\[0.35cm]
+Руководитель выпускной квалификационной работы /\\
+Supervisor of Graduation Thesis
+&
+\fbox{\begin{minipage}[c][2.4cm][c]{5.1cm}
+\textbf{Кудасов Николай Дмитриевич / Kudasov Nikolay Dmitrievich}
+\end{minipage}}
+&
+\fbox{\begin{minipage}[c][2.4cm][c]{3.7cm}
+\centering \vfill подпись / signature
+\end{minipage}}
+\end{tabular}
+
+\vfill
+\begin{center}
+Иннополис, Innopolis, 2025
+\end{center}
+\endgroup
+\clearpage
+
+\pagenumbering{arabic}
+\setcounter{page}{2}
+\tableofcontents
+\listoftables
+\listoffigures
+\include{chapters/abstract}
+
+\clearpage
+
+\include{chapters/chapter1}
+\include{chapters/chapter2}
+\include{chapters/chapter3}
+\include{chapters/chapter4}
+\include{chapters/chapter5}
+\include{chapters/chapter6}
+
+\printbibliography[heading=bibintoc,title={References}]
+\include{chapters/appex}
+
+\end{document}
+
+

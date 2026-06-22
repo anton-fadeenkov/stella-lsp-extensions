@@ -1,0 +1,62 @@
+﻿\chapter{Introduction}
+\label{chap:intro}
+\chaptermark{Introduction}
+
+\section{Motivation}
+
+Static type systems detect inconsistent operations before program execution and provide information used by compilers and development tools~\cite{Types,HarperPFPL,Gao2017TypeNotType,Hanenberg2010StaticDynamic}. For a student, however, the result of type checking is often visible only as a final type or an error message. The intermediate structures---the abstract syntax tree, the typing context, the applied typing rules, and dependencies between expressions---remain hidden.
+
+This problem is relevant in courses on compilers and programming languages~\cite{DragonBook,Types}. Students are expected to connect source code with formal notation, for example a typing judgment of the form $\Gamma \vdash e : T$. In this notation, $\Gamma$ is the typing context: a finite mapping from identifiers that are available at the current program point to their types. The expression $e$ is assigned type $T$ under this context. When only the final result is shown, it can be difficult to reconstruct which rule was applied and which subexpression caused a mismatch.
+
+Visualization is one way to expose these internal structures. Studies of software, algorithm, and data-structure visualization report that interactive representations can support the formation of mental models and the analysis of abstract processes~\cite{Price1993Taxonomy,Hundhausen2002MetaStudy,Naps2002Engagement,Sorva2013Review,EducationalTechnologyResearch}. Similar motivation is used in tools such as Jeliot and visAST, which connect program text with executable or structural representations for software-language education~\cite{Jeliot3,VisAST}. These studies motivate the interface design in this thesis, but their results cannot be transferred automatically to a new tool or to type-system visualization. The educational effect of the developed extension therefore requires a separate evaluation.
+
+\section{Problem Statement}
+
+Stella is an educational language designed for studying the implementation of static type systems~\cite{Abounegm2024Stella}. Its existing language server performs parsing, name resolution, type checking, and diagnostics. Standard Visual Studio Code features can display syntax highlighting, hover information, and error messages, but they do not provide a built-in representation of Stella typing derivations or semantic dependencies.
+
+The practical problem addressed in this work is the absence of an integrated interface that connects Stella source code with the internal results of semantic analysis. A useful interface should answer the following questions:
+
+\begin{itemize}
+    \item Which abstract syntax tree (AST) node corresponds to the current source fragment?
+    \item Which variables, parameters, and functions are available at the cursor position?
+    \item Which typing rules produce the type of the selected expression?
+    \item Which sequence of checks leads to a reported type error?
+    \item Which expressions and declarations influence the type of the selected expression?
+\end{itemize}
+
+A \emph{type dependency graph} is used in this thesis to answer the last question. It is a directed graph whose nodes represent selected expressions, functions, parameters, local bindings, and related subexpressions. An edge $u \rightarrow v$ means that the type or type-checking result of $v$ depends on information obtained from $u$. For example, in a function application, the argument and the called function have incoming edges to the application node. An edge is marked as conflicting when the connected types violate the relevant typing requirement.
+
+\section{Goal and Research Questions}
+
+The goal of this work is to design and implement a Visual Studio Code extension that exposes Stella syntax and type-analysis information as interactive visual representations linked to source code.
+
+The work addresses two research questions:
+
+\begin{enumerate}[label=\textbf{RQ\arabic*:}, leftmargin=*]
+    \item How can the semantic information produced by the Stella language server be represented in Visual Studio Code without mixing different analysis tasks into one overloaded interface?
+    \item Does the implemented prototype satisfy the functional criteria of locality, hierarchy, source-code traceability, navigation, and explicit conflict indication in a set of reproducible Stella scenarios?
+\end{enumerate}
+
+The research questions deliberately concern the design and functional behavior of the prototype. Claims about improved learning outcomes, perceived usability, code readability, or debugging speed would require a controlled study with representative users and are outside the evidence collected in this work.
+
+\section{Contributions}
+
+The contributions of this work are the following implemented artifacts and evaluation materials:
+
+\begin{enumerate}
+    \item A synchronized AST viewer that connects tree nodes with source-code ranges.
+    \item A scope and context panel that groups available bindings by the program construct that introduces them.
+    \item An interactive type derivation view that represents premises, typing rules, conclusions, and the local context $\Gamma$.
+    \item A reverse type-error trace that narrows a diagnostic from an enclosing construct to the conflicting subexpression.
+    \item A type dependency graph that shows type-relevant relations between functions, arguments, branches, local bindings, and selected expressions.
+    \item A set of custom Language Server Protocol requests and shared data structures used to transfer analysis results from the language server to the extension client.
+    \item A set of reproducible validation scenarios and example Stella programs for the implemented views.
+\end{enumerate}
+
+
+\section{Thesis Structure}
+
+Chapter~\ref{chap:background} reviews educational visualization, Stella, and the technologies used by language tools. Chapter~\ref{chap:design} defines the design requirements and evaluation method. Chapter~\ref{chap:implementation} describes the architecture, technology choices, implementation, and evolution of the prototype. Chapter~\ref{chap:evaluation} presents the results before discussing the individual validation scenarios and threats to validity. Chapter~\ref{chap:conclusion} summarizes the answers to the research questions and identifies future work. Appendix~\ref{app:artifacts} lists the implementation artifacts and reproduction steps.
+
+
+

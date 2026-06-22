@@ -1,0 +1,99 @@
+﻿\chapter{Design and Methodology}
+\label{chap:design}
+\chaptermark{Design and Methodology}
+
+\section{Design Objective}
+
+The extension is designed as an explanatory layer over the existing Stella language services. It does not replace parsing or type checking. Instead, it requests analysis results from the language server and presents them in a form connected to the editor. This boundary is important because a visualization must not introduce a second, inconsistent implementation of the Stella type system.
+
+The design starts from user questions rather than from available UI components. When reading code, a user may need to understand its syntactic structure, the names visible at a position, the derivation of a type, the source of a diagnostic, or the data that influences a type-checking result. These tasks use related information but require different representations.
+
+\section{Design Requirements}
+
+Five functional requirements were defined before evaluating the prototype.
+
+\begin{table}[htbp]
+\centering
+\caption{Design requirements for the visual analysis extension}
+\label{tab:design-requirements}
+\begin{tabular}{p{1.2cm}p{4.0cm}p{8.0cm}}
+\toprule
+\textbf{ID} & \textbf{Requirement} & \textbf{Observable condition} \\
+\midrule
+R1 & Locality & A view is built for the active source position or selected expression and avoids unrelated program data. \\
+R2 & Hierarchical explanation & A compound expression is decomposed into smaller AST nodes, typing premises, or diagnostic steps. \\
+R3 & Source traceability & Every meaningful visual element contains a source range when such a range exists. \\
+R4 & Bidirectional navigation & Editor selection updates a view, and selecting a visual element reveals the corresponding source fragment. \\
+R5 & Explicit conflict indication & Type mismatches are distinguished from valid dependencies and ordinary nodes. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The requirements are intentionally observable. Terms such as \enquote{easy to understand} or \enquote{readable} depend on a user's experience and should be measured in a user study or interpreted through established usability and visualization principles~\cite{GreenPetre1996,WareInfoVis}. In contrast, it is possible to verify whether a graph contains a conflict edge or whether a click reveals the expected source range.
+
+\section{Separation of Visual Representations}
+
+The prototype uses five coordinated views.
+
+\subsection{Abstract Syntax Tree}
+
+The AST view represents the hierarchical composition of the program. It is suitable for answering which language construct contains the cursor and how a compound expression is divided into child nodes. A native tree interface supports expansion and collapse and preserves a familiar editor interaction.
+
+\subsection{Scope and Typing Context}
+
+Scope and typing context are closely related but not identical concepts. Scope determines which declarations are visible at a program position. The typing context $\Gamma$ associates the visible names with their types. In the interface, this information is represented as nested frames. A frame identifies the construct that introduced bindings, such as the program, a function, a lambda abstraction, a \texttt{let} expression, or a pattern.
+
+For example, in
+\begin{verbatim}
+fn(x: Nat) => let y = succ(x) in y
+\end{verbatim}
+the context at the final occurrence of \texttt{y} contains the function parameter $x:\texttt{Nat}$ and the local binding $y:\texttt{Nat}$. Showing the bindings in separate frames preserves their origin instead of flattening them into one list.
+
+\subsection{Type Derivation Tree}
+
+A type derivation tree represents a judgment as a conclusion supported by zero or more premises. For the expression \texttt{succ(x)}, where $x:\texttt{Nat}$ is available, a simplified derivation is
+\[
+\frac{\Gamma \vdash x : \texttt{Nat}}
+     {\Gamma \vdash \texttt{succ}(x) : \texttt{Nat}}
+\;\textsc{T-Succ}.
+\]
+The view therefore needs a proof-oriented layout rather than a conventional vertical list. Each node stores the rule name, conclusion, premises, expression text, inferred type, relevant part of $\Gamma$, and source range.
+
+Only bindings relevant to the current expression should be displayed when possible. Repeating the complete program context at every node creates long judgments and hides the rule being explained. This is a design choice for locality, not a change to the formal typing relation.
+
+\subsection{Reverse Type-Error Trace}
+
+The error-trace view starts from a diagnostic and follows a narrowing sequence toward the conflicting expression. For
+\begin{verbatim}
+if true then 0 else false
+\end{verbatim}
+the trace should show the conditional-expression check, the requirement that both branches have compatible types, and the observed branch types \texttt{Nat} and \texttt{Bool}. Syntax diagnostics are excluded because parser-token expectations do not form a type derivation and would produce misleading output.
+
+A chain is used instead of a complete derivation tree. The purpose is to retain the diagnostic path that is relevant to the current mismatch rather than show every valid part of the expression.
+
+\subsection{Type Dependency Graph}
+
+The type dependency graph is a directed graph $G=(V,E)$. The idea is related to program dependence graphs and slicing, but the graph in this work is local and type-oriented rather than a complete program-dependence representation~\cite{Ferrante1987PDG,Weiser1981Slicing,Horwitz1990Slicing}. The set $V$ contains type-relevant program entities: functions, parameters, local bindings, cases, expressions, and the selected node. An edge $(u,v)\in E$ states that checking the type of $v$ uses information associated with $u$. Edges may have labels such as \texttt{argument}, \texttt{condition}, \texttt{then}, \texttt{else}, \texttt{value}, or \texttt{return}.
+
+For the application \texttt{takesNat(flag)}, the function declaration and the argument are dependencies of the application. If \texttt{takesNat} expects \texttt{Nat} but \texttt{flag} has type \texttt{Bool}, the argument edge and the related node are marked as conflicts. The graph does not claim to be a complete program-dependence graph. It is a local explanatory graph constructed for the selected expression and its type-checking relations.
+
+\section{Connection to Source Code}
+
+A shared range representation is used across all custom responses. A range contains start and end positions in a source document. The client converts this representation to a Visual Studio Code range and uses it for highlighting and navigation.
+
+This design establishes a common interaction rule. Moving the cursor selects the deepest relevant AST node and refreshes position-dependent views. In the opposite direction, clicking an AST item, scope binding, derivation step, trace step, or dependency-graph node reveals its range in the editor. The views therefore remain secondary representations of the same source document rather than independent diagrams.
+
+\section{Client--Server Boundary}
+
+The language server owns parsing, AST traversal, scope computation, type inference, and construction of semantic relations. The extension client owns command registration, editor event handling, view state, layout, and source highlighting. Shared TypeScript interfaces define the protocol boundary.
+
+This separation follows the general LSP architecture~\cite{MicrosoftLSP}. It also reduces the risk of semantic disagreement: the client renders types returned by the server instead of implementing type rules again. Custom requests are used because the standard protocol has no messages for the five Stella-specific representations.
+
+\section{Evaluation Methodology}
+
+The prototype is evaluated through scenario-based functional validation, following the general principle that software-engineering evaluations should make their procedure, context, and validity limitations explicit~\cite{Wohlin2012Experimentation,RunesonHost2009}. Each scenario defines an input program, a cursor position or selected expression, an action, and an observable expected result. The scenarios cover both correct programs and programs with type mismatches.
+
+The method answers RQ2 by checking the requirements in Table~\ref{tab:design-requirements}. It can confirm, for example, that selecting a derivation node reveals a source range and that incompatible conditional branches are marked in a graph. It cannot determine whether a representative student completes a task faster, makes fewer mistakes, or reports a better usability score.
+
+The author executed the scenarios manually in the extension development environment and compared the observed state with the expected result. Example programs and expected graph behavior are included with the artifact and listed in Appendix~\ref{app:artifacts}. The evaluation results and limitations are reported in Chapter~\ref{chap:evaluation}.
+

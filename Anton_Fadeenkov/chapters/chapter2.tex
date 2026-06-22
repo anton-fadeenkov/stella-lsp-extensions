@@ -1,0 +1,47 @@
+﻿\chapter{Background and Related Work}
+\label{chap:background}
+\chaptermark{Background and Related Work}
+
+\section{Visualization in Computer Science Education}
+
+Program visualization is used to make structures and execution processes observable and has been classified as a distinct area of software visualization research~\cite{Price1993Taxonomy,Sorva2013Review}. Kogan, Chassidim, and Rabaev evaluated AVDS (Animation and Visualization of Data Structures) in a data-structures course~\cite{EducationalTechnologyResearch}. Their experiment involved 78 students. More than 75\% of the students who used AVDS received grades above 80 points, and the reported mean System Usability Scale score was 79.17.
+
+The System Usability Scale (SUS) is a ten-item questionnaire used to obtain a single perceived-usability score in the range from 0 to 100~\cite{Brooke1996SUS,Bangor2009SUS,ISO924111}. The result is an index, not a percentage of correctly completed tasks. Therefore, the value 79.17 describes participants' subjective assessment of AVDS usability; it does not directly measure learning or prove the usability of another visualization tool.
+
+Aalvik's visAST project applies visualization to abstract syntax trees~\cite{VisAST}. Its main purpose is to help students connect source text, grammar concepts, and the hierarchical AST representation. The project is particularly relevant to this thesis because it treats source-to-structure navigation as part of the learning interface. At the same time, visAST focuses on syntax, while this work also visualizes scope, typing derivations, errors, and dependencies.
+
+The related studies support the general motivation for visualization and program comprehension support~\cite{Sorva2013NotionalMachines,Storey2005ProgramComprehension}, but they do not provide empirical evidence for the particular Stella extension developed in this work. For this reason, their findings are used as design background rather than as proof of the effectiveness of the prototype.
+
+\section{Stella and Static Type Systems}
+
+Stella (Statically Typed Extensible Language for Learning Advanced Compiler Construction) is designed for teaching the implementation of type systems~\cite{Abounegm2024Stella,StellaLanguageDocumentation}. The language supports a core calculus and extensions that introduce additional type-system features. This structure allows course assignments to progress from basic typing rules to more advanced language constructs.
+
+A type checker can be described using judgments such as
+\[
+    \Gamma \vdash e : T,
+\]
+where $\Gamma$ denotes the typing context, $e$ is an expression, and $T$ is its type~\cite{Types,HarperPFPL,NielsonProgramAnalysis}. The context records assumptions available at the current point, for example $x:\texttt{Nat}$. A derivation tree explains a judgment by showing the premises required by a typing rule and the conclusion produced by that rule.
+
+An AST, a typing context, and a derivation tree answer different questions. The AST describes syntactic composition. The context describes available identifiers and their types. The derivation tree explains why an expression has a type. A type dependency graph provides another view: it emphasizes relations between type-relevant program elements instead of reproducing the complete proof structure. Keeping these models separate is an important design decision of this work.
+
+\section{Language Server Protocol}
+
+The Language Server Protocol (LSP) standardizes communication between an editor client and a language server and uses JSON-RPC as the underlying message format~\cite{MicrosoftLSP,JSONRPC20}. The protocol defines common operations such as diagnostics, completion, hover information, and navigation to definitions. This separation allows language analysis to remain independent from a particular editor.
+
+The standard LSP methods do not define responses for Stella-specific derivation trees, scope frames, or type dependency graphs. However, LSP permits custom requests. The implementation in this work uses this extension point: the server produces semantic data, shared TypeScript interfaces define the response format, and the Visual Studio Code client renders the result. This preserves the client--server boundary while supporting domain-specific visualizations.
+
+After this definition, the shortened form \emph{LSP} is used consistently.
+
+\section{Visual Studio Code Extension API}
+
+The Visual Studio Code Extension API provides commands, editor events, tree views, decorations, and webviews~\cite{MicrosoftVS,VSCodeTreeView,VSCodeWebview}. Tree views are suitable for structures that naturally use parent--child navigation, such as an AST or nested scope frames. Webviews provide more control over layout and interaction and are therefore suitable for proof-like derivation trees, error traces, and dependency graphs.
+
+The API also provides source positions and ranges. These ranges are essential for the design in this thesis because every meaningful visual node can be connected to the corresponding fragment of Stella code. The same mechanism supports both directions of navigation: an editor selection updates a view, and a click in a view reveals the source fragment.
+
+\section{Research Gap}
+
+Existing work provides evidence that visualization can be useful in computer science education and demonstrates tools for algorithm, program, and AST visualization~\cite{Hundhausen2002MetaStudy,Naps2002Engagement,EducationalTechnologyResearch,Jeliot3,VisAST}. Stella provides a structured environment for learning type-system implementation~\cite{Abounegm2024Stella}. LSP and the Visual Studio Code Extension API provide the technical basis for integrating language analysis with an editor~\cite{MicrosoftLSP,MicrosoftVS}.
+
+The remaining gap is a Stella-specific interface that exposes several stages of type analysis and keeps them connected to source code. The gap is practical rather than theoretical: this work does not introduce a new typing algorithm. It transforms existing syntax and type information into coordinated views for program inspection. The next chapter defines the requirements used to design and evaluate these views.
+
+

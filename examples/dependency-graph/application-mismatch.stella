@@ -1,0 +1,9 @@
+language core;
+
+fn takesNat(x : Nat) -> Nat {
+  return succ(x)
+}
+
+fn main(flag : Bool) -> Nat {
+  return takesNat(flag)
+}

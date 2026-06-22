@@ -19,7 +19,7 @@
   "scripts": {
     "build": "tsc -b tsconfig.src.json && node esbuild.mjs",
     "watch": "concurrently -n tsc,esbuild -c blue,yellow \"tsc -b tsconfig.src.json --watch\" \"node esbuild.mjs --watch\"",
-    "lint": "eslint src --ext ts",
+    "lint": "eslint",
     "langium:generate": "langium generate",
     "langium:generate:production": "langium generate --mode=production",
     "langium:watch": "langium generate --watch",
@@ -68,21 +68,12 @@
   },
   "engines": {
     "vscode": "^1.67.0",
-    "node": ">=18.0.0"
+    "node": ">=20.0.0"
   },
   "categories": [
     "Programming Languages"
   ],
   "contributes": {
-    "views": {
-      "stellaView": [
-        {
-          "id": "syntaxTree",
-          "name": "Syntax Tree",
-          "when": "resourceLangId == stella"
-        }
-      ]
-    },
     "viewsContainers": {
       "activitybar": [
         {
@@ -92,12 +83,46 @@
         }
       ]
     },
+    "views": {
+      "stellaView": [
+        {
+          "id": "syntaxTree",
+          "name": "Syntax Tree"
+        },
+        {
+          "id": "scopeContext",
+          "name": "Scope / Context"
+        }
+      ]
+    },
     "menus": {
       "view/title": [
         {
           "command": "stella.refreshSyntaxTree",
           "group": "navigation",
           "when": "view == syntaxTree"
+        },
+        {
+          "command": "stella.refreshSyntaxTree",
+          "group": "navigation",
+          "when": "view == scopeContext"
+        }
+      ],
+      "editor/title": [
+        {
+          "command": "stella.showTypeDerivation",
+          "group": "navigation",
+          "when": "resourceLangId == stella"
+        },
+        {
+          "command": "stella.showTypeErrorTrace",
+          "group": "navigation",
+          "when": "resourceLangId == stella"
+        },
+        {
+          "command": "stella.showTypeDependencyGraph",
+          "group": "navigation",
+          "when": "resourceLangId == stella"
         }
       ]
     },
@@ -106,6 +131,25 @@
         "command": "stella.refreshSyntaxTree",
         "title": "Refresh Syntax Tree",
         "icon": "$(refresh)"
+      },
+      {
+        "command": "stella.showAstJson",
+        "title": "Show AST (JSON)"
+      },
+      {
+        "command": "stella.showTypeDerivation",
+        "title": "Show Type Derivation",
+        "icon": "$(symbol-method)"
+      },
+      {
+        "command": "stella.showTypeErrorTrace",
+        "title": "Show Type Error Trace",
+        "icon": "$(debug-step-back)"
+      },
+      {
+        "command": "stella.showTypeDependencyGraph",
+        "title": "Show Type Dependency Graph",
+        "icon": "$(symbol-structure)"
       }
     ],
     "languages": [
@@ -150,7 +194,13 @@
     ]
   },
   "activationEvents": [
-    "onLanguage:stella"
+    "onLanguage:stella",
+    "onCommand:stella.showAstJson",
+    "onView:syntaxTree",
+    "onView:scopeContext",
+    "onCommand:stella.showTypeDerivation",
+    "onCommand:stella.showTypeErrorTrace",
+    "onCommand:stella.showTypeDependencyGraph"
   ],
   "main": "./out/extension/main.cjs",
   "bin": {

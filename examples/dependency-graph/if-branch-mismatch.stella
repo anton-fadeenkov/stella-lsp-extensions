@@ -1,0 +1,5 @@
+language core;
+
+fn badIf(flag : Bool) -> Nat {
+  return if flag then 0 else false
+}

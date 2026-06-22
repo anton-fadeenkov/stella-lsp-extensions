@@ -1,0 +1,14 @@
+﻿\chapter{Conclusion}
+\label{chap:conclusion}
+\chaptermark{Conclusion}
+
+This work designed and implemented a Visual Studio Code extension that exposes internal Stella analysis data through five coordinated views: an AST, a scope and typing-context panel, a type derivation tree, a reverse type-error trace, and a type dependency graph.
+
+For RQ1, the implementation shows that Stella semantic information can be integrated without placing all information in one interface. Hierarchical structures are rendered with tree views, while proof-like and graph-based structures are rendered with webviews. Custom LSP requests preserve the separation between semantic computation on the server and presentation in the client. Shared source ranges connect every view to the original program.
+
+For RQ2, the six author-executed scenarios showed that the prototype satisfied locality, hierarchical decomposition, source traceability, bidirectional navigation, and explicit conflict indication for the tested programs. The dependency graph additionally made the meaning of type relations explicit through labeled directed edges and conflict markers.
+
+The evaluation does not confirm that the extension improves code readability, debugging speed, or learning outcomes for a representative user population. Such a conclusion would require a controlled user study. A suitable next experiment would compare standard Stella editor feedback with the developed extension in a within-subject design. Participants would complete code-understanding and type-error-localization tasks in both conditions. Completion time, correctness, navigation steps, and unsuccessful attempts would provide objective measures, while SUS could be used as a separate subjective usability measure~\cite{Brooke1996SUS,Bangor2009SUS,ISO924111}.
+
+Further technical work should expand derivation support for additional Stella extensions, improve error traces for more diagnostic categories, test dependency graphs on larger programs, and add automated protocol and UI tests. These steps would make the artifact more robust and provide a stronger basis for a later user study.
+

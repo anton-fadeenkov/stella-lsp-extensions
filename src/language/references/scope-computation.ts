@@ -6,7 +6,7 @@ import {
 } from "langium";
 
 export class StellaScopeComputation extends DefaultScopeComputation {
-  override async computeExports(
+  override async collectExportedSymbols(
     document: LangiumDocument<AstNode>
   ): Promise<AstNodeDescription[]> {
     // Stella does not support import/export statements

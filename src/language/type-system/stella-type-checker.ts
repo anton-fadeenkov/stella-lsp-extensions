@@ -13,7 +13,7 @@ import {
   ConstInt,
   ConstTrue,
   ConstFalse,
-  TypeUnit,
+  // TypeUnit,
   TypeAuto,
   TypeTop,
   TypeBottom,
@@ -25,7 +25,7 @@ import {
   DeclFun,
   TypeNat,
   TypeBool,
-  ConstUnit,
+  // ConstUnit,
 } from "../generated/ast.js";
 
 export interface StellaSpecifics extends TypirLangiumSpecifics {
@@ -54,10 +54,10 @@ export class StellaTypeSystem
       .inferenceRule({ languageKey: TypeBool.$type })
       .finish();
 
-    const typeUnit = typir.factory.Primitives.create({ primitiveName: "Unit" })
-      .inferenceRule({ languageKey: ConstUnit.$type })
-      .inferenceRule({ languageKey: TypeUnit.$type })
-      .finish();
+    // const typeUnit = typir.factory.Primitives.create({ primitiveName: "Unit" })
+    //   .inferenceRule({ languageKey: ConstUnit.$type })
+    //   .inferenceRule({ languageKey: TypeUnit.$type })
+    //   .finish();
 
     // TODO: is auto really a "primitive" type? Is there a distinction between primitive and built-in types in Typir?
     const typeAuto = typir.factory.Primitives.create({

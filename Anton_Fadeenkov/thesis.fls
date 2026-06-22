@@ -1,0 +1,375 @@
+PWD C:\Users\toxaf\Downloads\stella-lsp-dependency-graph-build-fix\stella_fix\Anton_Fadeenkov
+INPUT C:\Users\toxaf\AppData\Local\MiKTeX\miktex\data\le\xetex\xelatex.fmt
+INPUT thesis.tex
+OUTPUT thesis.log
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\extsizes\extreport.cls
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\extsizes\extreport.cls
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\extsizes\size14.clo
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\extsizes\size14.clo
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\extsizes\size14.clo
+INPUT C:\Program Files\MiKTeX\tex\latex\base\exscale.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\base\exscale.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\iftex\iftex.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\iftex\iftex.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\fontspec\fontspec.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\fontspec\fontspec.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\l3packages\xparse\xparse.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\l3packages\xparse\xparse.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\l3kernel\expl3.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\l3kernel\expl3.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\l3backend\l3backend-xetex.def
+INPUT C:\Program Files\MiKTeX\tex\latex\l3backend\l3backend-xetex.def
+INPUT C:\Program Files\MiKTeX\tex\latex\fontspec\fontspec-xetex.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\fontspec\fontspec-xetex.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\base\fontenc.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\base\fontenc.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\fontspec\fontspec.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\fontspec\fontspec.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\fontspec\fontspec.cfg
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\geometry\geometry.sty
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\geometry\geometry.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\keyval.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\keyval.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\iftex\ifvtex.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\iftex\ifvtex.sty
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\geometry\geometry.cfg
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\geometry\geometry.cfg
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\geometry\geometry.cfg
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\setspace\setspace.sty
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\setspace\setspace.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\tools\indentfirst.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\tools\indentfirst.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\babel\babel.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\babel\babel.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\babel\xebabel.def
+INPUT C:\Program Files\MiKTeX\tex\latex\arabi\bblopts.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\arabi\bblopts.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\arabi\bblopts.cfg
+INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\en\babel-english.tex
+INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\en\babel-english.tex
+INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\en\babel-english.tex
+INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\en\babel-en.ini
+INPUT C:\Program Files\MiKTeX\tex\latex\babel-english\english.ldf
+INPUT C:\Program Files\MiKTeX\tex\latex\babel-english\english.ldf
+INPUT C:\Program Files\MiKTeX\tex\latex\babel-english\english.ldf
+INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amsmath.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amsmath.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amsopn.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amstext.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amstext.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amsgen.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amsgen.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amsbsy.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amsbsy.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amsopn.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\amsfonts\amsfonts.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\amsfonts\amsfonts.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\graphicx.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\graphicx.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\graphics.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\graphics.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\trig.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\trig.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-def\xetex.def
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-def\xetex.def
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-def\xetex.def
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\booktabs\booktabs.sty
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\booktabs\booktabs.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\tools\longtable.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\tools\longtable.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\tools\array.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\tools\array.sty
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\float\float.sty
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\float\float.sty
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\placeins\placeins.sty
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\placeins\placeins.sty
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\enumitem\enumitem.sty
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\enumitem\enumitem.sty
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\csquotes\csquotes.sty
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\csquotes\csquotes.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\etoolbox\etoolbox.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\etoolbox\etoolbox.sty
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\csquotes\csquotes.def
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\csquotes\csquotes.def
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\csquotes\csquotes.def
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\csquotes\csquotes.cfg
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\csquotes\csquotes.cfg
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\csquotes\csquotes.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\url\url.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\url\url.sty
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\xurl\xurl.sty
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\xurl\xurl.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\xcolor\xcolor.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\xcolor\xcolor.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-cfg\color.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-cfg\color.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-cfg\color.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\mathcolor.ltx
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\mathcolor.ltx
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\mathcolor.ltx
+INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\biblatex.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\biblatex.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\pdftexcmds\pdftexcmds.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\pdftexcmds\pdftexcmds.sty
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\generic\infwarerr\infwarerr.sty
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\generic\infwarerr\infwarerr.sty
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\generic\ltxcmds\ltxcmds.sty
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\generic\ltxcmds\ltxcmds.sty
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\kvoptions\kvoptions.sty
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\kvoptions\kvoptions.sty
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\kvsetkeys\kvsetkeys.sty
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\kvsetkeys\kvsetkeys.sty
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\logreq\logreq.sty
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\logreq\logreq.sty
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\logreq\logreq.def
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\logreq\logreq.def
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\logreq\logreq.def
+INPUT C:\Program Files\MiKTeX\tex\latex\base\ifthen.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\base\ifthen.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\blx-dm.def
+INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\blx-dm.def
+INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\blx-dm.def
+INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\blx-unicode.def
+INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\blx-unicode.def
+INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\blx-unicode.def
+INPUT C:\Program Files\MiKTeX\tex\generic\unicode-data\UnicodeData.txt
+INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\blx-compat.def
+INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\blx-compat.def
+INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\blx-compat.def
+INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\biblatex.def
+INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\biblatex.def
+INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\biblatex.def
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\biblatex-ieee\ieee.bbx
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\biblatex-ieee\ieee.bbx
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\biblatex-ieee\ieee.bbx
+INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\bbx\numeric-comp.bbx
+INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\bbx\numeric-comp.bbx
+INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\bbx\numeric-comp.bbx
+INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\bbx\numeric.bbx
+INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\bbx\numeric.bbx
+INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\bbx\numeric.bbx
+INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\bbx\standard.bbx
+INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\bbx\standard.bbx
+INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\bbx\standard.bbx
+INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\lbx\english.lbx
+INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\lbx\english.lbx
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\biblatex-ieee\ieee.cbx
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\biblatex-ieee\ieee.cbx
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\biblatex-ieee\ieee.cbx
+INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\cbx\numeric-verb.cbx
+INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\cbx\numeric-verb.cbx
+INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\cbx\numeric-verb.cbx
+INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\biblatex.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\biblatex.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\biblatex.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\blx-case-expl3.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\blx-case-expl3.sty
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\caption\caption.sty
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\caption\caption.sty
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\caption\caption3.sty
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\caption\caption3.sty
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\caption\ltcaption.sty
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\caption\ltcaption.sty
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\fancyhdr\fancyhdr.sty
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\fancyhdr\fancyhdr.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\hyperref\hyperref.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\hyperref\hyperref.sty
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\generic\kvdefinekeys\kvdefinekeys.sty
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\generic\kvdefinekeys\kvdefinekeys.sty
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\generic\pdfescape\pdfescape.sty
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\generic\pdfescape\pdfescape.sty
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\hycolor\hycolor.sty
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\hycolor\hycolor.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\hyperref\nameref.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\hyperref\nameref.sty
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\refcount\refcount.sty
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\refcount\refcount.sty
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\generic\gettitlestring\gettitlestring.sty
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\generic\gettitlestring\gettitlestring.sty
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\generic\stringenc\stringenc.sty
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\generic\stringenc\stringenc.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\hyperref\pd1enc.def
+INPUT C:\Program Files\MiKTeX\tex\latex\hyperref\pd1enc.def
+INPUT C:\Program Files\MiKTeX\tex\latex\hyperref\pd1enc.def
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\generic\intcalc\intcalc.sty
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\generic\intcalc\intcalc.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\hyperref\puenc.def
+INPUT C:\Program Files\MiKTeX\tex\latex\hyperref\puenc.def
+INPUT C:\Program Files\MiKTeX\tex\latex\hyperref\puenc.def
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\zapfding\pzdr.tfm
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\generic\bitset\bitset.sty
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\generic\bitset\bitset.sty
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\generic\bigintcalc\bigintcalc.sty
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\generic\bigintcalc\bigintcalc.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\hyperref\hxetex.def
+INPUT C:\Program Files\MiKTeX\tex\latex\hyperref\hxetex.def
+INPUT C:\Program Files\MiKTeX\tex\latex\hyperref\hxetex.def
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\rerunfilecheck\rerunfilecheck.sty
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\latex\rerunfilecheck\rerunfilecheck.sty
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\generic\uniquecounter\uniquecounter.sty
+INPUT C:\Users\toxaf\AppData\Roaming\MiKTeX\tex\generic\uniquecounter\uniquecounter.sty
+INPUT .\thesis.aux
+INPUT .\thesis.aux
+INPUT thesis.aux
+INPUT .\chapters\abstract.aux
+INPUT .\chapters\abstract.aux
+INPUT chapters\abstract.aux
+INPUT .\chapters\chapter1.aux
+INPUT .\chapters\chapter1.aux
+INPUT chapters\chapter1.aux
+INPUT .\chapters\chapter2.aux
+INPUT .\chapters\chapter2.aux
+INPUT chapters\chapter2.aux
+INPUT .\chapters\chapter3.aux
+INPUT .\chapters\chapter3.aux
+INPUT chapters\chapter3.aux
+INPUT .\chapters\chapter4.aux
+INPUT .\chapters\chapter4.aux
+INPUT chapters\chapter4.aux
+INPUT .\chapters\chapter5.aux
+INPUT .\chapters\chapter5.aux
+INPUT chapters\chapter5.aux
+INPUT .\chapters\chapter6.aux
+INPUT .\chapters\chapter6.aux
+INPUT chapters\chapter6.aux
+INPUT .\chapters\appex.aux
+INPUT .\chapters\appex.aux
+INPUT chapters\appex.aux
+OUTPUT thesis.aux
+INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\lbx\english.lbx
+OUTPUT thesis.bcf
+INPUT thesis.bbl
+INPUT .\thesis.bbl
+INPUT .\thesis.bbl
+INPUT .\thesis.bbl
+INPUT thesis.bbl
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\color.sty
+INPUT .\thesis.out
+INPUT .\thesis.out
+INPUT thesis.out
+INPUT thesis.out
+INPUT .\thesis.out
+INPUT .\thesis.out
+OUTPUT thesis.out
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi12.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Program Files\MiKTeX\tex\latex\amsfonts\umsa.fd
+INPUT C:\Program Files\MiKTeX\tex\latex\amsfonts\umsa.fd
+INPUT C:\Program Files\MiKTeX\tex\latex\amsfonts\umsa.fd
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam7.tfm
+INPUT C:\Program Files\MiKTeX\tex\latex\amsfonts\umsb.fd
+INPUT C:\Program Files\MiKTeX\tex\latex\amsfonts\umsb.fd
+INPUT C:\Program Files\MiKTeX\tex\latex\amsfonts\umsb.fd
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
+OUTPUT thesis.xdv
+INPUT .\thesis.toc
+INPUT .\thesis.toc
+INPUT thesis.toc
+OUTPUT thesis.toc
+INPUT .\thesis.lot
+INPUT .\thesis.lot
+INPUT thesis.lot
+OUTPUT thesis.lot
+INPUT .\thesis.lof
+INPUT .\thesis.lof
+INPUT thesis.lof
+OUTPUT thesis.lof
+INPUT .\chapters\abstract.tex
+INPUT .\chapters\abstract.tex
+OUTPUT chapters\abstract.aux
+INPUT .\chapters\abstract.tex
+INPUT .\chapters\abstract.tex
+INPUT chapters\abstract.tex
+INPUT .\chapters\chapter1.tex
+INPUT .\chapters\chapter1.tex
+OUTPUT chapters\chapter1.aux
+INPUT .\chapters\chapter1.tex
+INPUT .\chapters\chapter1.tex
+INPUT chapters\chapter1.tex
+INPUT .\chapters\chapter2.tex
+INPUT .\chapters\chapter2.tex
+OUTPUT chapters\chapter2.aux
+INPUT .\chapters\chapter2.tex
+INPUT .\chapters\chapter2.tex
+INPUT chapters\chapter2.tex
+INPUT .\chapters\chapter3.tex
+INPUT .\chapters\chapter3.tex
+OUTPUT chapters\chapter3.aux
+INPUT .\chapters\chapter3.tex
+INPUT .\chapters\chapter3.tex
+INPUT chapters\chapter3.tex
+INPUT .\chapters\chapter4.tex
+INPUT .\chapters\chapter4.tex
+OUTPUT chapters\chapter4.aux
+INPUT .\chapters\chapter4.tex
+INPUT .\chapters\chapter4.tex
+INPUT chapters\chapter4.tex
+INPUT .\figs\ast.jpg
+INPUT .\figs\ast.jpg
+INPUT .\figs\ast.jpg
+INPUT .\figs\context_panel.png
+INPUT .\figs\context_panel.png
+INPUT .\figs\context_panel.png
+INPUT .\figs\derivation_tree.png
+INPUT .\figs\derivation_tree.png
+INPUT .\figs\derivation_tree.png
+INPUT .\figs\error_trace.png
+INPUT .\figs\error_trace.png
+INPUT .\figs\error_trace.png
+INPUT .\chapters\chapter5.tex
+INPUT .\chapters\chapter5.tex
+OUTPUT chapters\chapter5.aux
+INPUT .\chapters\chapter5.tex
+INPUT .\chapters\chapter5.tex
+INPUT chapters\chapter5.tex
+INPUT .\chapters\chapter6.tex
+INPUT .\chapters\chapter6.tex
+OUTPUT chapters\chapter6.aux
+INPUT .\chapters\chapter6.tex
+INPUT .\chapters\chapter6.tex
+INPUT chapters\chapter6.tex
+INPUT .\chapters\appex.tex
+INPUT .\chapters\appex.tex
+OUTPUT chapters\appex.aux
+INPUT .\chapters\appex.tex
+INPUT .\chapters\appex.tex
+INPUT chapters\appex.tex
+INPUT thesis.aux
+INPUT .\chapters\abstract.aux
+INPUT .\chapters\abstract.aux
+INPUT chapters\abstract.aux
+INPUT .\chapters\chapter1.aux
+INPUT .\chapters\chapter1.aux
+INPUT chapters\chapter1.aux
+INPUT .\chapters\chapter2.aux
+INPUT .\chapters\chapter2.aux
+INPUT chapters\chapter2.aux
+INPUT .\chapters\chapter3.aux
+INPUT .\chapters\chapter3.aux
+INPUT chapters\chapter3.aux
+INPUT .\chapters\chapter4.aux
+INPUT .\chapters\chapter4.aux
+INPUT chapters\chapter4.aux
+INPUT .\chapters\chapter5.aux
+INPUT .\chapters\chapter5.aux
+INPUT chapters\chapter5.aux
+INPUT .\chapters\chapter6.aux
+INPUT .\chapters\chapter6.aux
+INPUT chapters\chapter6.aux
+INPUT .\chapters\appex.aux
+INPUT .\chapters\appex.aux
+INPUT chapters\appex.aux
+INPUT .\thesis.out
+INPUT .\thesis.out
+INPUT thesis.run.xml
+OUTPUT thesis.run.xml

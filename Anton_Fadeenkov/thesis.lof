@@ -1,0 +1,13 @@
+\babel@toc {english}{}\relax 
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Synchronized AST view for a Stella function}}{26}{figure.caption.7}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Scope and typing-context view for a nested abstraction}}{27}{figure.caption.8}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Interactive type derivation for nested abstractions}}{28}{figure.caption.9}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Reverse trace for a return-type mismatch}}{28}{figure.caption.10}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Type dependency graph for an argument mismatch}}{29}{figure.caption.11}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
